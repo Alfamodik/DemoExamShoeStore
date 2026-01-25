@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="ShoeStore.ProductUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ShoeStore"
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel
+            Orientation="Horizontal">
+            <Image/>
+
+            <StackPanel
+                Orientation="Vertical">
+                <TextBlock Text="{Binding CategoruAndName}"/>
+                <TextBlock Text="{Binding Description}"/>
+                <TextBlock Text="{Binding Manufacture}"/>
+                <TextBlock Text="{Binding Supplier}"/>
+                <TextBlock Text="{Binding Price}"/>
+                <TextBlock Text="{Binding Unit}"/>
+                <TextBlock Text="{Binding AmountInStorage}"/>
+            </StackPanel>
+
+            <TextBlock Text="{Binding Discount}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
