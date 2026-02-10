@@ -1,0 +1,107 @@
+﻿<Window x:Class="ShoeStore.SearchCatalog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoeStore"
+        mc:Ignorable="d"
+        Title="Каталог"
+        MinHeight="450"
+        MinWidth="800"
+        Height="450"
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Image 
+            Grid.Row="0"
+            Grid.Column="0"
+            Height="100"
+            Source="/Resources/Icon.png"
+            Margin="10"
+            HorizontalAlignment="Left"/>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="1"
+            Text="Каталог"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="40"/>
+
+        <Button
+            Grid.Row="0"
+            Grid.Column="2"
+            Content="Назад"
+            Height="35"
+            Width="100"
+            Click="Logout"
+            Margin="10" 
+            Background="MediumSpringGreen"
+            HorizontalAlignment="Right"/>
+
+        <ComboBox
+            Grid.Row="1"
+            Grid.Column="0"
+            Name="SuppliersCompoBox"
+            FontSize="20"
+            Margin="5"
+            SelectionChanged="OnSupplierSelected">
+            <ComboBoxItem IsSelected="True" Content="Все поставщики"/>
+        </ComboBox>
+
+        <ComboBox
+            Grid.Row="1"
+            Grid.Column="1"
+            Name="SortTypeCompoBox"
+            FontSize="20"
+            Margin="5"
+            SelectionChanged="OnSortTypeSelected">
+            <ComboBoxItem IsSelected="True" Content="По убыванию"/>
+            <ComboBoxItem Content="По возрастанию"/>
+        </ComboBox>
+
+        <TextBox
+            Grid.Row="1"
+            Grid.Column="2"
+            Name="SearchBar"
+            TextChanged="SearchBarTextChanged"
+            FontSize="20"
+            Margin="5"
+            />
+
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            Content="Добавить товар"
+            Margin="5"
+            FontSize="20"
+            Click="OpenAddProductWindow"/>
+        
+        <ListBox
+            Name="ProductsListBox"
+            Grid.Column="0"
+            Grid.Row="3"
+            Grid.ColumnSpan="3"
+            HorizontalContentAlignment="Stretch"
+            MouseDoubleClick="OpenEditProductWindow">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <local:ProductUserControl DataContext="{Binding}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

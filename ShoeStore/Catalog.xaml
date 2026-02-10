@@ -14,20 +14,48 @@
         WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <Image 
+            Grid.Row="0"
+            Grid.Column="0"
+            Height="100"
+            Source="/Resources/Icon.png"
+            Margin="10"/>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="1"
+            Text="Каталог"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="40"/>
+
+        <Button
+            Grid.Row="0"
+            Grid.Column="2"
+            Content="Назад"
+            Height="35"
+            Width="100"
+            Click="Logout"
+            Margin="10" Background="MediumSpringGreen"/>
+
         <ListBox
             Name="ProductsListBox"
             Grid.Column="0"
-            Grid.Row="2">
+            Grid.Row="2"
+            Grid.ColumnSpan="3"
+            HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <local:ProductUserControl/>
+                    <local:ProductUserControl DataContext="{Binding}"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

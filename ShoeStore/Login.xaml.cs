@@ -3,15 +3,15 @@ using System.Windows;
 
 namespace ShoeStore;
 
-public partial class MainWindow : Window
+public partial class Login : Window
 {
-    public MainWindow()
+    public Login()
     {
         InitializeComponent();
         ShoeStoreContext.Instance.Users.Any();
     }
 
-    private void Login(object sender, RoutedEventArgs e)
+    private void OnLoginClick(object sender, RoutedEventArgs e)
     {
         User? user = ShoeStoreContext.Instance.Users.FirstOrDefault(user => user.Login == login.Text && user.Password == password.Text);
 
@@ -21,14 +21,25 @@ public partial class MainWindow : Window
             return;
         }
 
-        AccessRights accessRights = AccessRights.User;
-
         if (user.Role == "Менеджер")
-            accessRights = AccessRights.Manager;
-        else if (user.Role == "Администратор")
-            accessRights = AccessRights.Admin;
+        {
+            ShowSearchCatalog(AccessRights.Manager, user);
+            return;
+        }
+        
+        if (user.Role == "Администратор")
+        {
+            ShowSearchCatalog(AccessRights.Admin, user);
+            return;
+        }
+        
+        new Catalog(AccessRights.User, user).Show();
+        Close();
+    }
 
-        new Catalog(accessRights, user).Show();
+    private void ShowSearchCatalog(AccessRights accessRights, User user)
+    {
+        new SearchCatalog(accessRights, user).Show();
         Close();
     }
 

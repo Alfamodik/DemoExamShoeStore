@@ -5,7 +5,13 @@
     <Compile Update="Catalog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ProductEditWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ProductUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SearchCatalog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

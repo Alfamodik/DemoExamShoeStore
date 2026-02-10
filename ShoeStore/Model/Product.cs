@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace ShoeStore.Model;
 
@@ -34,4 +35,18 @@ public partial class Product
     public virtual ProductCategory? ProductCategory { get; set; }
 
     public virtual Supplier? Supplier { get; set; }
+
+    public string CategoruAndName => $"{ProductCategory?.ProductCategory1} | {Product1}";
+
+    public string? CostFormated => Cost.ToString();
+
+    public string CostWithDiscount
+    {
+        get
+        {
+            CultureInfo culture = CultureInfo.GetCultureInfo("ru-RU");
+            decimal cost = (decimal)(Cost.Value - Cost * Discount / 100);
+            return cost.ToString("F2", culture);
+        }
+    }
 }

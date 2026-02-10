@@ -1,4 +1,5 @@
-﻿using ShoeStore.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using ShoeStore.Model;
 using System.Windows;
 
 namespace ShoeStore
@@ -19,7 +20,17 @@ namespace ShoeStore
 
         private void InitializeView()
         {
-            ProductsListBox.ItemsSource = ShoeStoreContext.Instance.Products.ToList();
+            ProductsListBox.ItemsSource = ShoeStoreContext.Instance.Products
+                .Include(p => p.ProductCategory)
+                .Include(p => p.Manufacturer)
+                .Include(p => p.Supplier)
+                .ToList();
+        }
+
+        private void Logout(object sender, RoutedEventArgs e)
+        {
+            new Login().Show();
+            Close();
         }
     }
 }

@@ -4,24 +4,45 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ShoeStore"
-             mc:Ignorable="d" >
-    <Grid>
-        <StackPanel
-            Orientation="Horizontal">
-            <Image/>
+             mc:Ignorable="d">
+    <Grid
+        x:Name="MainGrin" 
+        HorizontalAlignment="Stretch"
+        Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <Image
+            Name="ProductImage"
+            Grid.Column="0"/>
 
-            <StackPanel
-                Orientation="Vertical">
-                <TextBlock Text="{Binding CategoruAndName}"/>
-                <TextBlock Text="{Binding Description}"/>
-                <TextBlock Text="{Binding Manufacture}"/>
-                <TextBlock Text="{Binding Supplier}"/>
-                <TextBlock Text="{Binding Price}"/>
-                <TextBlock Text="{Binding Unit}"/>
-                <TextBlock Text="{Binding AmountInStorage}"/>
+        <StackPanel
+            Grid.Column="1"
+            Orientation="Vertical"
+            Margin="15,0,15,0">
+            <TextBlock Text="{Binding CategoruAndName}"/>
+            <TextBlock Text="{Binding Description, StringFormat={}Описание товаара: {0}}"/>
+            <TextBlock Text="{Binding Manufacturer.Manufacturer1, StringFormat={}Производитель: {0}}"/>
+            <TextBlock Text="{Binding Supplier.Supplier1, StringFormat={}Поставщик: {0}}"/>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Цена: " />
+                <TextBlock Name="CostFormated" Text="{Binding CostFormated, StringFormat={}{0}₽}" />
+                <TextBlock Margin="5,0,0,0" Name="CostWithDiscount" Text="{Binding CostWithDiscount, StringFormat={}{0}₽}"/>
             </StackPanel>
 
-            <TextBlock Text="{Binding Discount}"/>
+            <TextBlock Text="{Binding Unit, StringFormat={}Еденица измерения: {0}}"/>
+            <TextBlock Text="{Binding AmountInStorage, StringFormat={}Количество на складе: {0}}"/>
         </StackPanel>
+
+        <TextBlock 
+            Grid.Column="2"
+            Width="50"
+            Text="{Binding Discount, StringFormat={}{0}%}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"/>
     </Grid>
 </UserControl>

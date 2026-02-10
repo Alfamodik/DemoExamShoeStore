@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\catalog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\catalog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\catalog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\catalog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\producteditwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\producteditwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,42 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.xaml",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\Login.xaml",
-              "RelativeDocumentMoniker": "ShoeStore\\Login.xaml",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\Login.xaml",
-              "RelativeToolTip": "ShoeStore\\Login.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-25T14:45:40.042Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Catalog.xaml",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\Catalog.xaml",
-              "RelativeDocumentMoniker": "ShoeStore\\Catalog.xaml",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\Catalog.xaml",
-              "RelativeToolTip": "ShoeStore\\Catalog.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-25T14:45:33.942Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Catalog.xaml.cs",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\Catalog.xaml.cs",
-              "RelativeDocumentMoniker": "ShoeStore\\Catalog.xaml.cs",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\Catalog.xaml.cs",
-              "RelativeToolTip": "ShoeStore\\Catalog.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBUAAAAMAAAAAAAAAA==",
+              "Title": "ProductEditWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\ProductEditWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ShoeStore\\ProductEditWindow.xaml.cs",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\ProductEditWindow.xaml.cs",
+              "RelativeToolTip": "ShoeStore\\ProductEditWindow.xaml.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAgwGAAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T14:38:44.549Z"
+              "WhenOpened": "2026-02-10T11:51:44.441Z",
+              "EditorCaption": ""
             }
           ]
         }

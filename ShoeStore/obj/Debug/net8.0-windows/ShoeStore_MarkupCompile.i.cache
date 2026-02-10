@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\App.xaml
-31548570062
+51806457374
 
-172053790539
+19902683284
 212-1961475407
-Catalog.xaml;Login.xaml;ProductUserControl.xaml;
+Catalog.xaml;Login.xaml;ProductEditWindow.xaml;ProductUserControl.xaml;SearchCatalog.xaml;
 
 True
 

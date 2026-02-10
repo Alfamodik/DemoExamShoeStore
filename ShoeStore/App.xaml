@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:ShoeStore"
              StartupUri="Login.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+        </Style>
     </Application.Resources>
 </Application>

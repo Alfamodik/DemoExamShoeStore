@@ -106,3 +106,9 @@ F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\Catalog.baml
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\ProductUserControl.g.cs
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\ProductUserControl.baml
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\App.baml
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\ShoeStore.sourcelink.json
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\SearchCatalog.g.cs
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\SearchCatalog.baml
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\ProductEditWindow.baml
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\ProductEditWindow.g.cs
