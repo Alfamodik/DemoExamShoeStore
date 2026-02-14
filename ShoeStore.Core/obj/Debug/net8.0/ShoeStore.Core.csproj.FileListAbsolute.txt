@@ -1,0 +1,15 @@
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\bin\Debug\net8.0\ShoeStore.Core.deps.json
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\bin\Debug\net8.0\ShoeStore.Core.runtimeconfig.json
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\bin\Debug\net8.0\ShoeStore.Core.dll
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\bin\Debug\net8.0\ShoeStore.Core.pdb
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\ShoeStore.Core.csproj.AssemblyReference.cache
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\ShoeStore.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\ShoeStore.Core.AssemblyInfoInputs.cache
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\ShoeStore.Core.AssemblyInfo.cs
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\ShoeStore.Core.csproj.CoreCompileInputs.cache
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\ShoeStore.Core.sourcelink.json
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\ShoeStore.Core.dll
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\refint\ShoeStore.Core.dll
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\ShoeStore.Core.pdb
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\ShoeStore.Core.genruntimeconfig.cache
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Core\obj\Debug\net8.0\ref\ShoeStore.Core.dll

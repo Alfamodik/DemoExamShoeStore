@@ -1,4 +1,4 @@
-﻿using ShoeStore.Model;
+﻿using ShoeStore.Core.Model;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;

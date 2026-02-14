@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query;
-using ShoeStore.Model;
+using ShoeStore.Core.Model;
+using ShoeStore.Core;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -47,7 +47,7 @@ namespace ShoeStore
             
             products = products
                 .Where(SearchItems)
-                .Where(p => SuppliersCompoBox.SelectedIndex == 0 || p.Supplier.Supplier1 == SuppliersCompoBox.SelectedItem.ToString())
+                .Where(p => SuppliersCompoBox.SelectedIndex == 0 || p.Supplier!.Supplier1 == SuppliersCompoBox.SelectedItem.ToString())
                 .OrderByDescending(p => p.AmountInStorage);
 
             if (SortTypeCompoBox.SelectedIndex == 1)
@@ -63,16 +63,16 @@ namespace ShoeStore
             if (string.IsNullOrWhiteSpace(serachText))
                 return true;
 
-            if (product.Product1.Contains(serachText, StringComparison.CurrentCultureIgnoreCase))
+            if (product.Product1!.Contains(serachText, StringComparison.CurrentCultureIgnoreCase))
                 return true;
 
-            if (product.Description.Contains(serachText, StringComparison.CurrentCultureIgnoreCase))
+            if (product.Description!.Contains(serachText, StringComparison.CurrentCultureIgnoreCase))
                 return true;
 
-            if (product.Manufacturer.Manufacturer1.Contains(serachText, StringComparison.CurrentCultureIgnoreCase))
+            if (product.Manufacturer!.Manufacturer1!.Contains(serachText, StringComparison.CurrentCultureIgnoreCase))
                 return true;
 
-            if (product.Supplier.Supplier1.Contains(serachText, StringComparison.CurrentCultureIgnoreCase))
+            if (product.Supplier!.Supplier1!.Contains(serachText, StringComparison.CurrentCultureIgnoreCase))
                 return true;
 
             return false;

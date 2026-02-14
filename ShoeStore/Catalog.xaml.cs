@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ShoeStore.Model;
+using ShoeStore.Core.Model;
+using ShoeStore.Core;
 using System.Windows;
 
 namespace ShoeStore

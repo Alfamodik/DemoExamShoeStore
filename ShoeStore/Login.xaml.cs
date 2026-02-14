@@ -1,4 +1,5 @@
-﻿using ShoeStore.Model;
+﻿using ShoeStore.Core.Model;
+using ShoeStore.Core;
 using System.Windows;
 
 namespace ShoeStore;
@@ -8,7 +9,7 @@ public partial class Login : Window
     public Login()
     {
         InitializeComponent();
-        ShoeStoreContext.Instance.Users.Any();
+        _ = ShoeStoreContext.Instance.Users.Any();
     }
 
     private void OnLoginClick(object sender, RoutedEventArgs e)

@@ -28,6 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ShoeStore.Core\ShoeStore.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\Icon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

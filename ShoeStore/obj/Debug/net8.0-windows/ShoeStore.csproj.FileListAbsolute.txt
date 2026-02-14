@@ -112,3 +112,5 @@ F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\SearchCatalo
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\SearchCatalog.baml
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\ProductEditWindow.baml
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\ProductEditWindow.g.cs
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\bin\Debug\net8.0-windows\ShoeStore.Core.dll
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\bin\Debug\net8.0-windows\ShoeStore.Core.pdb

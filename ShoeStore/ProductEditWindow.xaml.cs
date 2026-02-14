@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
-using ShoeStore.Model;
-using System.Diagnostics;
+using ShoeStore.Core.Model;
+using ShoeStore.Core;
 using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
@@ -11,8 +11,8 @@ namespace ShoeStore
     {
         private readonly AccessRights _accessRights;
         private readonly User? _user;
-        private Product _product;
-        private bool _isEdit;
+        private readonly Product _product;
+        private readonly bool _isEdit;
 
         public ProductEditWindow(AccessRights accessRights, User? user = null, Product? product = null)
         {
@@ -72,7 +72,7 @@ namespace ShoeStore
 
         private void SelectImage(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog
+            OpenFileDialog dialog = new()
             {
                 Filter = "Images|*.png;*.jpg;*.jpeg"
             };
@@ -110,19 +110,19 @@ namespace ShoeStore
                 return;
             }
 
-            if (SupplierComboBox.SelectedItem is not Supplier selectedSupplier)
+            if (SupplierComboBox.SelectedItem is not Supplier)
             {
                 MessageBox.Show("Выберите поставщика.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            if (CategoryComboBox.SelectedItem is not ProductCategory selectedCategory)
+            if (CategoryComboBox.SelectedItem is not ProductCategory)
             {
                 MessageBox.Show("Выберите категорию товара.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            if (ManufacturerComboBox.SelectedItem is not Manufacturer selectedManufacturer)
+            if (ManufacturerComboBox.SelectedItem is not Manufacturer)
             {
                 MessageBox.Show("Выберите производителя.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -130,13 +130,13 @@ namespace ShoeStore
 
             _product.Product1 = NameTextBox.Text;
             _product.Description = DescriptionTextBox.Text;
-            _product.SupplierId = (SupplierComboBox.SelectedItem as Supplier).Id;
+            _product.SupplierId = (SupplierComboBox.SelectedItem as Supplier)!.Id;
             _product.Unit = UnitTextBox.Text;
             _product.Cost = cost;
             _product.AmountInStorage = amountInStorage;
             _product.Discount = discount;
-            _product.ProductCategoryId = (CategoryComboBox.SelectedItem as ProductCategory).Id;
-            _product.ManufacturerId = (ManufacturerComboBox.SelectedItem as Manufacturer).Id;
+            _product.ProductCategoryId = (CategoryComboBox.SelectedItem as ProductCategory)!.Id;
+            _product.ManufacturerId = (ManufacturerComboBox.SelectedItem as Manufacturer)!.Id;
 
             if (!_isEdit)
             {
@@ -159,9 +159,7 @@ namespace ShoeStore
         {
             string article;
 
-            List<string> existingArticles = ShoeStoreContext.Instance.Products
-                .Select(p => p.Article)
-                .ToList();
+            List<string> existingArticles = [.. ShoeStoreContext.Instance.Products.Select(p => p.Article)];
 
             do
                 article = GenerateArticle();
