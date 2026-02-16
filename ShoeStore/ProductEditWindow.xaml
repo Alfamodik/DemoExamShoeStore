@@ -2,58 +2,67 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Товар"
-        Height="600"
+        MinHeight="750"
         Width="450"
         WindowStartupLocation="CenterScreen">
 
-    <ScrollViewer>
-        <StackPanel Margin="10">
-            <Image 
-                Name="ProductImage"
-                Height="150"
-                Margin="0,10"
-                Stretch="Uniform"/>
+    <StackPanel Margin="10">
+        <Image 
+            Name="ProductImage"
+            Height="150"
+            Margin="0,10"
+            Stretch="Uniform"/>
 
-            <Button Content="Выбрать фото" Click="SelectImage"/>
+        <Button Content="Выбрать фото" Click="SelectImage"/>
 
-            <TextBlock Text="Наименование"/>
-            <TextBox Name="NameTextBox"/>
+        <TextBlock Text="Наименование"/>
+        <TextBox Name="NameTextBox"/>
 
-            <TextBlock Text="Категория"/>
-            <ComboBox Name="CategoryComboBox" DisplayMemberPath="ProductCategory1"/>
+        <TextBlock Text="Категория"/>
+        <ComboBox Name="CategoryComboBox" DisplayMemberPath="ProductCategory1"/>
 
-            <TextBlock Text="Описание"/>
-            <TextBox Name="DescriptionTextBox" Height="60"/>
+        <TextBlock Text="Описание"/>
+        <TextBox Name="DescriptionTextBox" Height="60"/>
 
-            <TextBlock Text="Производитель"/>
-            <ComboBox Name="ManufacturerComboBox" DisplayMemberPath="Manufacturer1"/>
+        <TextBlock Text="Производитель"/>
+        <ComboBox Name="ManufacturerComboBox" DisplayMemberPath="Manufacturer1"/>
 
-            <TextBlock Text="Поставщик"/>
-            <ComboBox Name="SupplierComboBox" DisplayMemberPath="Supplier1"/>
+        <TextBlock Text="Поставщик"/>
+        <ComboBox Name="SupplierComboBox" DisplayMemberPath="Supplier1"/>
 
-            <TextBlock Text="Цена"/>
-            <TextBox Name="PriceTextBox"/>
+        <TextBlock Text="Цена"/>
+        <TextBox Name="PriceTextBox"/>
 
-            <TextBlock Text="Ед. измерения"/>
-            <TextBox Name="UnitTextBox"/>
+        <TextBlock Text="Ед. измерения"/>
+        <ComboBox Name="UnitComboBox">
+            <ComboBoxItem Content="шт."/>
+            <ComboBoxItem Content="л."/>
+            <ComboBoxItem Content="кг."/>
+        </ComboBox>
 
-            <TextBlock Text="Количество на складе"/>
-            <TextBox Name="QuantityTextBox"/>
+        <TextBlock Text="Количество на складе"/>
+        <TextBox Name="QuantityTextBox"/>
 
-            <TextBlock Text="Скидка (%)"/>
-            <TextBox Name="DiscountTextBox"/>
+        <TextBlock Text="Скидка (%)"/>
+        <TextBox Name="DiscountTextBox"/>
 
-            <Button 
-                Content="Назад"
-                Margin="0,15"
-                Height="35"
-                Click="BackClick"/>    
+        <Button 
+            Content="Назад"
+            Margin="0,5"
+            Height="35"
+            Click="BackClick"/>    
             
-            <Button 
-                Content="Сохранить"
-                Margin="0,15"
-                Height="35"
-                Click="SaveProduct"/>
-        </StackPanel>
-    </ScrollViewer>
+        <Button 
+            Content="Сохранить"
+            Margin="0,5"
+            Height="35"
+            Click="SaveProduct"/>
+
+        <Button 
+            Content="Удалить"
+            Margin="0,5"
+            Height="35"
+            Click="DeleteProduct"/>
+
+    </StackPanel>
 </Window>

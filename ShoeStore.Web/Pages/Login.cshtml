@@ -1,0 +1,42 @@
+﻿@page
+@model ShoeStore.Web.Pages.LoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Вход</title>
+    <link rel="stylesheet" href="~/css/login.css" />
+    <link rel="icon" href="~/favicon.ico" />
+</head>
+<body>
+    <form method="post">
+        <div class="login-container">
+            <div class="login-title">Вход</div>
+
+            <input asp-for="Login" class="login-input login-login" />
+
+            <input asp-for="Password" type="password"
+                   class="login-input login-password" />
+
+            <button asp-page-handler="Login"
+                    class="login-button login-main">
+                Войти
+            </button>
+
+            <button asp-page-handler="Guest"
+                    class="login-button login-guest">
+                Войти как гость
+            </button>
+
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="login-error">@Model.ErrorMessage</div>
+            }
+        </div>
+    </form>
+</body>
+</html>

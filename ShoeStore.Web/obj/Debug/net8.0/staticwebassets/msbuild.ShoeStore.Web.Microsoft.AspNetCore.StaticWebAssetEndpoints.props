@@ -1,5 +1,41 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/catalog.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\catalog.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xJNBMElGufTe5O9WpOecBlSNw\u002B779SD9UaNeUL80ob0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2202"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xJNBMElGufTe5O9WpOecBlSNw\u002B779SD9UaNeUL80ob0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 11:45:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/catalog.wv89jljpj3.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\catalog.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wv89jljpj3"},{"Name":"integrity","Value":"sha256-xJNBMElGufTe5O9WpOecBlSNw\u002B779SD9UaNeUL80ob0="},{"Name":"label","Value":"_content/ShoeStore.Web/css/catalog.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2202"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xJNBMElGufTe5O9WpOecBlSNw\u002B779SD9UaNeUL80ob0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 11:45:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/login.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"882"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 10:52:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/login.wh79wjauxt.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wh79wjauxt"},{"Name":"integrity","Value":"sha256-zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY="},{"Name":"label","Value":"_content/ShoeStore.Web/css/login.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"882"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 10:52:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/productEdit.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\productEdit.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-FVLQ3XnAAOnMXk/HcYsdwoUaOFJZQU26T6TpcHSN7Wk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"655"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022FVLQ3XnAAOnMXk/HcYsdwoUaOFJZQU26T6TpcHSN7Wk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 11:33:32 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/productEdit.fbx9lqo124.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\productEdit.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"fbx9lqo124"},{"Name":"integrity","Value":"sha256-FVLQ3XnAAOnMXk/HcYsdwoUaOFJZQU26T6TpcHSN7Wk="},{"Name":"label","Value":"_content/ShoeStore.Web/css/productEdit.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"655"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022FVLQ3XnAAOnMXk/HcYsdwoUaOFJZQU26T6TpcHSN7Wk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 11:33:32 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/site.c2tiyv64ts.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -724,13 +760,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ShoeStore.Web.d0pklcni7n.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-nZB2Aps4DUlX6lDBE5T2ZdpCxcO6/EgDyoUGxVwbgj0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1131"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022nZB2Aps4DUlX6lDBE5T2ZdpCxcO6/EgDyoUGxVwbgj0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 09:46:47 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1131"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022nZB2Aps4DUlX6lDBE5T2ZdpCxcO6/EgDyoUGxVwbgj0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 10:38:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/ShoeStore.Web.d0pklcni7n.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ShoeStore.Web.d0pklcni7n.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"d0pklcni7n"},{"Name":"integrity","Value":"sha256-nZB2Aps4DUlX6lDBE5T2ZdpCxcO6/EgDyoUGxVwbgj0="},{"Name":"label","Value":"_content/ShoeStore.Web/ShoeStore.Web.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1131"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022nZB2Aps4DUlX6lDBE5T2ZdpCxcO6/EgDyoUGxVwbgj0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 09:46:47 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1131"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022nZB2Aps4DUlX6lDBE5T2ZdpCxcO6/EgDyoUGxVwbgj0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 10:38:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

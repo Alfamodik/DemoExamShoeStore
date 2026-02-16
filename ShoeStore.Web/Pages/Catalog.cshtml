@@ -1,0 +1,26 @@
+﻿@page
+@model ShoeStore.Web.Pages.CatalogModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Каталог";
+}
+
+<link rel="stylesheet" href="~/css/catalog.css" asp-append-version="true" />
+
+<div class="catalog-header">
+    <img src="~/Resources/Icon.png" alt="Icon" class="catalog-icon" />
+
+    <h1 class="catalog-title">Каталог</h1>
+
+    <form method="post" asp-page-handler="Logout" class="logout-form">
+        <button type="submit" class="btn-logout">Назад</button>
+    </form>
+</div>
+
+
+<div class="products-list">
+    @foreach (var product in Model.Products!)
+    {
+        @await Html.PartialAsync("ProductUserControl", product)
+    }
+</div>

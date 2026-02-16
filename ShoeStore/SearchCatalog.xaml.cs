@@ -43,7 +43,8 @@ namespace ShoeStore
             IEnumerable<Product> products = ShoeStoreContext.Instance.Products
                 .Include(p => p.ProductCategory)
                 .Include(p => p.Manufacturer)
-                .Include(p => p.Supplier);
+                .Include(p => p.Supplier)
+                .Include(p => p.Orders);
             
             products = products
                 .Where(SearchItems)
@@ -53,6 +54,7 @@ namespace ShoeStore
             if (SortTypeCompoBox.SelectedIndex == 1)
                 products = products.Reverse();
 
+            NoFoundText.Visibility = products.Any() ? Visibility.Collapsed : Visibility.Visible;
             ProductsListBox.ItemsSource = products.ToList();
         }
 

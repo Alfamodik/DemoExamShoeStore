@@ -113,3 +113,5 @@ F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\obj\Debug\net8.0\refint\ShoeStore
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\obj\Debug\net8.0\ShoeStore.Web.pdb
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\obj\Debug\net8.0\ShoeStore.Web.genruntimeconfig.cache
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\obj\Debug\net8.0\ref\ShoeStore.Web.dll
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\bin\Debug\net8.0\ShoeStore.Core.dll
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\bin\Debug\net8.0\ShoeStore.Core.pdb

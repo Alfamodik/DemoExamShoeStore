@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\ShoeStore.Web.d0pklcni7n.bundle.scp.css"
     },
     {
+      "Id": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\wwwroot\\css\\catalog.css",
+      "PackagePath": "staticwebassets\\css\\catalog.css"
+    },
+    {
+      "Id": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\wwwroot\\css\\productEdit.css",
+      "PackagePath": "staticwebassets\\css\\productEdit.css"
+    },
+    {
       "Id": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

@@ -1,0 +1,44 @@
+﻿body {
+    margin: 0;
+    font-family: Segoe UI, sans-serif;
+}
+
+.edit-container {
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-image {
+    height: 150px;
+    object-fit: contain;
+    margin: 0 auto 10px auto;
+}
+
+input,
+select,
+textarea {
+    padding: 6px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 60px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    height: 35px;
+    background: MediumSpringGreen;
+    border: none;
+    cursor: pointer;
+}

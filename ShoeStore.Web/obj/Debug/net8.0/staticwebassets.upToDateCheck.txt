@@ -1,3 +1,6 @@
+wwwroot\css\catalog.css
+wwwroot\css\login.css
+wwwroot\css\productEdit.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js

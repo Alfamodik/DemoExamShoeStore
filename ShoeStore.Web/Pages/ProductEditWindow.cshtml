@@ -1,0 +1,59 @@
+﻿@page
+@model ShoeStore.Web.Pages.ProductEditWindowModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Товар</title>
+    <link rel="stylesheet" href="~/css/productEdit.css" />
+</head>
+<body>
+
+    <form method="post" enctype="multipart/form-data" class="edit-container">
+        <img class="product-image" src="@Model.ImageSrc" alt="preview" />
+        <input type="file" name="ImageFile" accept="image/*" />
+
+        <label>Наименование</label>
+        <input asp-for="Name" />
+
+        <label>Категория</label>
+        <select asp-for="ProductCategoryId" asp-items="Model.CategoryItems"></select>
+
+        <label>Описание</label>
+        <textarea asp-for="Description"></textarea>
+
+        <label>Производитель</label>
+        <select asp-for="ManufacturerId" asp-items="Model.ManufacturerItems"></select>
+
+        <label>Поставщик</label>
+        <select asp-for="SupplierId" asp-items="Model.SupplierItems"></select>
+
+        <label>Цена</label>
+        <input asp-for="Cost" />
+
+        <label>Ед. измерения</label>
+        <input asp-for="Unit" />
+
+        <label>Количество на складе</label>
+        <input asp-for="AmountInStorage" />
+
+        <label>Скидка (%)</label>
+        <input asp-for="Discount" />
+
+        <div class="buttons">
+            <button type="submit" name="handler" value="Back">Назад</button>
+            <button type="submit" name="handler" value="Save">Сохранить</button>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="error">@Model.ErrorMessage</div>
+        }
+    </form>
+
+</body>
+</html>

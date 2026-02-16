@@ -1,0 +1,64 @@
+﻿@page
+@model ShoeStore.Web.Pages.SearchCatalogModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Каталог</title>
+    <link rel="stylesheet" href="~/css/catalog.css" asp-append-version="true" />
+</head>
+<body>
+
+    <form method="get" class="search-form">
+        <div class="catalog-header">
+            <img src="~/Resources/Icon.png" class="catalog-icon" alt="icon" />
+
+            <h1 class="catalog-title">Каталог</h1>
+
+            <div class="logout-form">
+                <a class="btn-logout" href="/Login">Назад</a>
+            </div>
+        </div>
+
+        <div class="filters">
+            <select name="selectedSupplier" onchange="this.form.submit()" class="filter-input">
+                <option value="">Все поставщики</option>
+                @foreach (var s in Model.Suppliers)
+                {
+                    <option value="@s" selected="@(s == Model.SelectedSupplier)">@s</option>
+                }
+            </select>
+
+            <select name="sortType" onchange="this.form.submit()" class="filter-input">
+                <option value="desc" selected="@(Model.SortType == "desc")">По убыванию</option>
+                <option value="asc" selected="@(Model.SortType == "asc")">По возрастанию</option>
+            </select>
+
+            <input name="searchText" value="@Model.SearchText" placeholder="Поиск..." class="filter-input search-bar" />  <!--oninput="this.form.submit()"-->
+        </div>
+
+        <div class="actions">
+            <a class="btn-add" href="/ProductEditWindow">Добавить товар</a>
+        </div>
+
+        <div class="products-list">
+            @if (!Model.Products.Any())
+            {
+                <div class="no-products">Товаров нет.</div>
+            }
+            else
+            {
+                foreach (var product in Model.Products)
+                {
+                    @await Html.PartialAsync("ProductUserControl", product)
+                }
+            }
+        </div>
+    </form>
+
+</body>
+</html>

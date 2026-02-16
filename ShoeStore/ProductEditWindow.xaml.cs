@@ -4,6 +4,7 @@ using ShoeStore.Core;
 using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Animation;
 
 namespace ShoeStore
 {
@@ -39,7 +40,7 @@ namespace ShoeStore
             NameTextBox.Text = _product.Product1;
             DescriptionTextBox.Text = _product.Description;
             SupplierComboBox.SelectedItem = _product.Supplier;
-            UnitTextBox.Text = _product.Unit;
+            UnitComboBox.Text = _product.Unit;
 
             PriceTextBox.Text = _product.Cost.ToString();
             QuantityTextBox.Text = _product.AmountInStorage.ToString();
@@ -51,12 +52,12 @@ namespace ShoeStore
             LoadImage(_product.Image);
         }
 
-        private void LoadImage(byte[]? imageBytes)
+        private bool LoadImage(byte[]? imageBytes, bool checkResolution = false)
         {
             if (imageBytes == null || imageBytes.Length == 0)
             {
                 ProductImage.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/picture.png"));
-                return;
+                return false;
             }
 
             using MemoryStream stream = new(imageBytes);
@@ -67,7 +68,11 @@ namespace ShoeStore
             bitmap.StreamSource = stream;
             bitmap.EndInit();
 
+            if (checkResolution && (bitmap.PixelWidth != 1920 && bitmap.PixelHeight != 1080))
+                return false;
+            
             ProductImage.Source = bitmap;
+            return true;
         }
 
         private void SelectImage(object sender, RoutedEventArgs e)
@@ -80,15 +85,26 @@ namespace ShoeStore
             if (dialog.ShowDialog() != true)
                 return;
 
-            _product.Image = File.ReadAllBytes(dialog.FileName);
-            LoadImage(_product.Image);
+            byte[] bytes = File.ReadAllBytes(dialog.FileName);
+            
+            if (!LoadImage(bytes, true))
+            {
+                MessageBox.Show(
+                    "Разрешение изображения должно быть 1920 x 1080",
+                    "Ошибка",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
+                return;
+            }
+
+            _product.Image = bytes;
         }
         
         private void SaveProduct(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(NameTextBox.Text))
+            if (string.IsNullOrWhiteSpace(NameTextBox.Text) || NameTextBox.Text.Length > 45)
             {
-                MessageBox.Show("Введите название товара.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Введите название товара не более 45 символов.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -98,13 +114,13 @@ namespace ShoeStore
                 return;
             }
 
-            if (!decimal.TryParse(DiscountTextBox.Text, out decimal discount) || discount < 0 || discount > 100)
+            if (!decimal.TryParse(DiscountTextBox.Text, out decimal discount) || discount < 0 || discount > 99)
             {
                 MessageBox.Show("Скидка должна быть числом от 0 до 100%.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            if (!int.TryParse(QuantityTextBox.Text, out int amountInStorage) || amountInStorage < 0)
+            if (!int.TryParse(QuantityTextBox.Text, out int amountInStorage) || amountInStorage < 1)
             {
                 MessageBox.Show("Количество на складе должно быть целым числом больше или равна 0.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -128,10 +144,16 @@ namespace ShoeStore
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(UnitComboBox.Text)/* || UnitComboBox.Text.Length > 10*/)
+            {
+                MessageBox.Show("Введите еденицу измрения не более 10 символов.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             _product.Product1 = NameTextBox.Text;
             _product.Description = DescriptionTextBox.Text;
             _product.SupplierId = (SupplierComboBox.SelectedItem as Supplier)!.Id;
-            _product.Unit = UnitTextBox.Text;
+            _product.Unit = UnitComboBox.Text;
             _product.Cost = cost;
             _product.AmountInStorage = amountInStorage;
             _product.Discount = discount;
@@ -178,6 +200,29 @@ namespace ShoeStore
             int lastDigit = random.Next(0, 10);
 
             return $"{firstLetter}{digitsPart:D3}{secondLetter}{lastDigit}";
+        }
+
+        private void DeleteProduct(object sender, RoutedEventArgs e)
+        {
+            if (_isEdit)
+            {
+                if (_product.Orders.Count != 0)
+                {
+                    MessageBox.Show(
+                        "Нельзя удалить товар с заказами.", 
+                        "Ошибка", 
+                        MessageBoxButton.OK, 
+                        MessageBoxImage.Warning);
+
+                    return;
+                }
+
+                ShoeStoreContext.Instance.Products.Remove(_product);
+                ShoeStoreContext.Instance.SaveChanges();
+            }
+
+            new SearchCatalog(_accessRights, _user).Show();
+            Close();
         }
     }
 }
