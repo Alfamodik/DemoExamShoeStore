@@ -1,7 +1,11 @@
 ﻿@model ShoeStore.Core.Model.Product
 @using System
+@using ShoeStore.Core
 
 @{
+    AccessRights? access = ViewData["AccessRights"] as AccessRights?;
+    bool canEdit = access == AccessRights.Manager || access == AccessRights.Admin;
+
     string imageSrc = Url.Content("~/Resources/picture.png");
 
     if (Model.Image != null && Model.Image.Length > 0)
@@ -16,32 +20,68 @@
         itemClass += " discount-high";
 }
 
-<a asp-page="/ProductEditWindow" asp-route-article="@Model.Article" class="@itemClass">
-    <div class="product-image">
-        <img src="@imageSrc" alt="product" />
-    </div>
-
-    <div class="product-info">
-        <div class="product-title">@Model.CategoruAndName</div>
-        <div class="product-desc">Описание товара: @Model.Description</div>
-        <div class="product-meta">Производитель: @Model.Manufacturer?.Manufacturer1</div>
-        <div class="product-meta">Поставщик: @Model.Supplier?.Supplier1</div>
-
-        <div class="product-price-row">
-            @if (Model.Discount > 0)
-            {
-                <span class="price-old">@Model.CostFormated ₽</span>
-                <span class="price-new">@Model.CostWithDiscount ₽</span>
-            }
-            else
-            {
-                <span class="price-new">@Model.CostFormated ₽</span>
-            }
+@if (canEdit)
+{
+    <a asp-page="/ProductEditWindow" asp-route-article="@Model.Article" class="@itemClass">
+        <div class="product-image">
+            <img src="@imageSrc" alt="product" />
         </div>
 
-        <div class="product-meta">Единица измерения: @Model.Unit</div>
-        <div class="product-meta">Количество на складе: @Model.AmountInStorage</div>
-    </div>
+        <div class="product-info">
+            <div class="product-title">@Model.CategoruAndName</div>
+            <div class="product-desc">Описание товара: @Model.Description</div>
+            <div class="product-meta">Производитель: @Model.Manufacturer?.Manufacturer1</div>
+            <div class="product-meta">Поставщик: @Model.Supplier?.Supplier1</div>
 
-    <div class="discount-badge">@Model.Discount %</div>
-</a>
+            <div class="product-price-row">
+                @if (Model.Discount > 0)
+                {
+                    <span class="price-old">@Model.CostFormated ₽</span>
+                    <span class="price-new">@Model.CostWithDiscount ₽</span>
+                }
+                else
+                {
+                    <span class="price-new">@Model.CostFormated ₽</span>
+                }
+            </div>
+
+            <div class="product-meta">Единица измерения: @Model.Unit</div>
+            <div class="product-meta">Количество на складе: @Model.AmountInStorage</div>
+        </div>
+
+        <div class="discount-badge">@Model.Discount %</div>
+    </a>
+
+}
+else
+{
+    <div class="@itemClass">
+        <div class="product-image">
+            <img src="@imageSrc" alt="product" />
+        </div>
+
+        <div class="product-info">
+            <div class="product-title">@Model.CategoruAndName</div>
+            <div class="product-desc">Описание товара: @Model.Description</div>
+            <div class="product-meta">Производитель: @Model.Manufacturer?.Manufacturer1</div>
+            <div class="product-meta">Поставщик: @Model.Supplier?.Supplier1</div>
+
+            <div class="product-price-row">
+                @if (Model.Discount > 0)
+                {
+                    <span class="price-old">@Model.CostFormated ₽</span>
+                    <span class="price-new">@Model.CostWithDiscount ₽</span>
+                }
+                else
+                {
+                    <span class="price-new">@Model.CostFormated ₽</span>
+                }
+            </div>
+
+            <div class="product-meta">Единица измерения: @Model.Unit</div>
+            <div class="product-meta">Количество на складе: @Model.AmountInStorage</div>
+        </div>
+
+        <div class="discount-badge">@Model.Discount %</div>
+    </div>
+}

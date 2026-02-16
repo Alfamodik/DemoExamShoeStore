@@ -12,17 +12,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wv89jljpj3"},{"Name":"integrity","Value":"sha256-xJNBMElGufTe5O9WpOecBlSNw\u002B779SD9UaNeUL80ob0="},{"Name":"label","Value":"_content/ShoeStore.Web/css/catalog.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2202"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xJNBMElGufTe5O9WpOecBlSNw\u002B779SD9UaNeUL80ob0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 11:45:01 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/login.5z0lih5qdh.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5z0lih5qdh"},{"Name":"integrity","Value":"sha256-zwGQ6lQ0sx7TteNHUWlArHvHUh7LkKdlSiZHPlzpTro="},{"Name":"label","Value":"_content/ShoeStore.Web/css/login.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"803"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zwGQ6lQ0sx7TteNHUWlArHvHUh7LkKdlSiZHPlzpTro=\u0022"},{"Name":"Last-Modified","Value":"Mon, 16 Feb 2026 07:07:36 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/login.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"882"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 10:52:24 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/login.wh79wjauxt.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wh79wjauxt"},{"Name":"integrity","Value":"sha256-zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY="},{"Name":"label","Value":"_content/ShoeStore.Web/css/login.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"882"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Feb 2026 10:52:24 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-zwGQ6lQ0sx7TteNHUWlArHvHUh7LkKdlSiZHPlzpTro="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"803"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zwGQ6lQ0sx7TteNHUWlArHvHUh7LkKdlSiZHPlzpTro=\u0022"},{"Name":"Last-Modified","Value":"Mon, 16 Feb 2026 07:07:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ShoeStore.Web/css/productEdit.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\productEdit.css'))</AssetFile>

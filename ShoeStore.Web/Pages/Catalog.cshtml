@@ -6,6 +6,7 @@
 }
 
 <link rel="stylesheet" href="~/css/catalog.css" asp-append-version="true" />
+<link rel="icon" href="~/Resources/Icon.ico" />
 
 <div class="catalog-header">
     <img src="~/Resources/Icon.png" alt="Icon" class="catalog-icon" />
@@ -21,6 +22,9 @@
 <div class="products-list">
     @foreach (var product in Model.Products!)
     {
-        @await Html.PartialAsync("ProductUserControl", product)
+        @await Html.PartialAsync("ProductUserControl", product, new ViewDataDictionary(ViewData)
+        {
+            ["AccessRights"] = Model.AccessRights
+        })
     }
 </div>

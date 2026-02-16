@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore.web\\pages\\producteditwindow.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|solutionrelative:shoestore.web\\pages\\producteditwindow.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\producteditwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\producteditwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductEditWindow.cshtml.cs",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\ProductEditWindow.cshtml.cs",
-              "RelativeDocumentMoniker": "ShoeStore.Web\\Pages\\ProductEditWindow.cshtml.cs",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\ProductEditWindow.cshtml.cs",
-              "RelativeToolTip": "ShoeStore.Web\\Pages\\ProductEditWindow.cshtml.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAYwKgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T05:43:29.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductEditWindow.xaml.cs",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\ProductEditWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ShoeStore\\ProductEditWindow.xaml.cs",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\ProductEditWindow.xaml.cs",
-              "RelativeToolTip": "ShoeStore\\ProductEditWindow.xaml.cs",
-              "ViewState": "AgIAALoAAAAAAAAAAAAowMgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T05:00:58.152Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

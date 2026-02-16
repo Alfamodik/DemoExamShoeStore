@@ -10,31 +10,31 @@
     <meta charset="utf-8" />
     <title>Вход</title>
     <link rel="stylesheet" href="~/css/login.css" />
-    <link rel="icon" href="~/favicon.ico" />
+    <link rel="icon" href="~/Resources/Icon.ico" />
 </head>
 <body>
-    <form method="post">
-        <div class="login-container">
-            <div class="login-title">Вход</div>
+    <form method="post" class="login-viewport" novalidate>
+        <div class="login-panel" role="dialog" aria-labelledby="login-title">
+            <h1 id="login-title" class="ttl">Вход</h1>
 
-            <input asp-for="Login" class="login-input login-login" />
+            <div class="field">
+                <label asp-for="Login">Почта</label>
+                <input asp-for="Login" class="input" />
+            </div>
 
-            <input asp-for="Password" type="password"
-                   class="login-input login-password" />
+            <div class="field">
+                <label asp-for="Password">Пароль</label>
+                <input asp-for="Password" type="password" class="input" />
+            </div>
 
-            <button asp-page-handler="Login"
-                    class="login-button login-main">
-                Войти
-            </button>
-
-            <button asp-page-handler="Guest"
-                    class="login-button login-guest">
-                Войти как гость
-            </button>
+            <div class="actions">
+                <button asp-page-handler="Login" class="btn primary" type="submit">Войти</button>
+                <button asp-page-handler="Guest" class="btn ghost" type="submit">Войти как гость</button>
+            </div>
 
             @if (!string.IsNullOrEmpty(Model.ErrorMessage))
             {
-                <div class="login-error">@Model.ErrorMessage</div>
+                <div class="error" role="alert">@Model.ErrorMessage</div>
             }
         </div>
     </form>

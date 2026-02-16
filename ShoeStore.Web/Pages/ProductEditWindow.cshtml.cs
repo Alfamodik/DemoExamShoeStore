@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using ShoeStore.Core;
 using ShoeStore.Core.Model;
-using System.Drawing;
+using SixLabors.ImageSharp;
 
 namespace ShoeStore.Web.Pages
 {
@@ -29,8 +31,13 @@ namespace ShoeStore.Web.Pages
 
         private bool _isEdit;
 
-        public void OnGet(string? article)
+        public AccessRights? AccessRights { get; set; } // Сохраняем текущие права
+
+        public void OnGet(string? article, string? accessRights)
         {
+            if (Enum.TryParse(accessRights, true, out AccessRights parsedAccess))
+                AccessRights = parsedAccess;
+
             LoadSelects();
 
             if (string.IsNullOrWhiteSpace(article))
@@ -59,23 +66,27 @@ namespace ShoeStore.Web.Pages
                 ImageSrc = $"data:image/png;base64,{Convert.ToBase64String(product.Image)}";
         }
 
-        public IActionResult OnPost(string handler)
+        public IActionResult OnPost(string handler, string? accessRights)
         {
-            if (handler == "Back")
-                return RedirectToPage("/SearchCatalog");
+            if (Enum.TryParse(accessRights, true, out AccessRights parsedAccess))
+                AccessRights = parsedAccess;
 
             LoadSelects();
+
+            if (handler == "Back")
+                return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights?.ToString() });
 
             if (handler == "Delete")
             {
                 if (string.IsNullOrWhiteSpace(Article))
-                    return Page();
+                    return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights?.ToString() });
 
                 Product? productToDelete = ShoeStoreContext.Instance.Products
+                    .Include(p => p.Orders)
                     .FirstOrDefault(p => p.Article == Article);
 
                 if (productToDelete == null)
-                    return RedirectToPage("/SearchCatalog");
+                    return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights?.ToString() });
 
                 if (productToDelete.Orders.Count != 0)
                 {
@@ -86,7 +97,7 @@ namespace ShoeStore.Web.Pages
                 ShoeStoreContext.Instance.Products.Remove(productToDelete);
                 ShoeStoreContext.Instance.SaveChanges();
 
-                return RedirectToPage("/SearchCatalog");
+                return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights?.ToString() });
             }
 
             if (!Validate())
@@ -126,7 +137,7 @@ namespace ShoeStore.Web.Pages
 
             ShoeStoreContext.Instance.SaveChanges();
 
-            return RedirectToPage("/SearchCatalog");
+            return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights?.ToString() });
         }
 
         private bool Validate()
@@ -137,14 +148,20 @@ namespace ShoeStore.Web.Pages
             if (Name.Length > 45)
                 return SetError("Название не должно превышать 45 символов.");
 
+            if (string.IsNullOrWhiteSpace(Description))
+                return SetError("Введите описание товара.");
+
+            if (Description.Length > 255)
+                return SetError("Описание не должно превышать 255 символов.");
+
             if (Cost is null || Cost <= 0)
                 return SetError("Цена должна быть больше 0.");
 
             if (Discount is null || Discount < 0 || Discount > 99)
                 return SetError("Скидка должна быть числом от 0 до 99.");
 
-            if (AmountInStorage is null || AmountInStorage < 0)
-                return SetError("Количество должно быть >= 0.");
+            if (AmountInStorage is null || AmountInStorage <= 0)
+                return SetError("Количество должно быть > 0.");
 
             if (SupplierId is null)
                 return SetError("Выберите поставщика.");
@@ -158,26 +175,22 @@ namespace ShoeStore.Web.Pages
             if (string.IsNullOrWhiteSpace(Unit) || Unit.Length > 10)
                 return SetError("Введите единицу измерения не более 10 символов.");
 
-            if (ImageFile != null)
-            {
-                if (!CheckImageResolution(ImageFile, 1920, 1080))
-                    return SetError("Разрешение изображения должно быть 1920 x 1080.");
-            }
+            if (ImageFile != null && !IsCorrectImageResolution(ImageFile, 1920, 1080))
+                return SetError("Разрешение изображения должно быть 1920 x 1080.");
 
             return true;
         }
 
-        private bool CheckImageResolution(IFormFile file, int requiredWidth, int requiredHeight)
+        private bool IsCorrectImageResolution(IFormFile file, int requiredWidth, int requiredHeight)
         {
-            return true;
-            /*using MemoryStream ms = new();
+            using MemoryStream ms = new();
             file.CopyTo(ms);
             ms.Position = 0;
 
-            using Image img = Image.FromStream(ms, useEmbeddedColorManagement: false, validateImageData: false);
-            return 
-            img.Width == requiredWidth && img.Height == requiredHeight;*/
+            using Image image = Image.Load(ms);
+            return image.Width == requiredWidth && image.Height == requiredHeight;
         }
+
         private bool SetError(string message)
         {
             ErrorMessage = message;
@@ -201,7 +214,7 @@ namespace ShoeStore.Web.Pages
 
         public static string GenerateUniqueArticle()
         {
-            List<string> existing = [.. ShoeStoreContext.Instance.Products.Select(p => p.Article)];
+            List<string> existing = ShoeStoreContext.Instance.Products.Select(p => p.Article).ToList();
             string article;
 
             do article = GenerateArticle();

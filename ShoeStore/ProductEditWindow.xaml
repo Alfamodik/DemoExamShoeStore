@@ -4,8 +4,8 @@
         Title="Товар"
         MinHeight="750"
         Width="450"
+        Icon="/Resources/Icon.png"
         WindowStartupLocation="CenterScreen">
-
     <StackPanel Margin="10">
         <Image 
             Name="ProductImage"

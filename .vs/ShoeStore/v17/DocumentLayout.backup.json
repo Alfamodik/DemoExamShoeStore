@@ -1,103 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\producteditwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\producteditwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\searchcatalog.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\searchcatalog.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\producteditwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\producteditwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8E80C0E-9598-4FB2-BF9D-2B059E87BA90}|ShoeStore.Core\\ShoeStore.Core.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore.core\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8E80C0E-9598-4FB2-BF9D-2B059E87BA90}|ShoeStore.Core\\ShoeStore.Core.csproj|solutionrelative:shoestore.core\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\searchcatalog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\searchcatalog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Product.cs",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Core\\Model\\Product.cs",
-              "RelativeDocumentMoniker": "ShoeStore.Core\\Model\\Product.cs",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Core\\Model\\Product.cs",
-              "RelativeToolTip": "ShoeStore.Core\\Model\\Product.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAoAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T05:07:38.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductEditWindow.xaml",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\ProductEditWindow.xaml",
-              "RelativeDocumentMoniker": "ShoeStore\\ProductEditWindow.xaml",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\ProductEditWindow.xaml",
-              "RelativeToolTip": "ShoeStore\\ProductEditWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-16T05:06:54.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductEditWindow.xaml.cs",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\ProductEditWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ShoeStore\\ProductEditWindow.xaml.cs",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\ProductEditWindow.xaml.cs",
-              "RelativeToolTip": "ShoeStore\\ProductEditWindow.xaml.cs",
-              "ViewState": "AgIAAMAAAAAAAAAAAAA+wNMAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T05:00:58.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SearchCatalog.xaml.cs",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\SearchCatalog.xaml.cs",
-              "RelativeDocumentMoniker": "ShoeStore\\SearchCatalog.xaml.cs",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\SearchCatalog.xaml.cs",
-              "RelativeToolTip": "ShoeStore\\SearchCatalog.xaml.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAQwF4AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T04:56:52.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SearchCatalog.xaml",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\SearchCatalog.xaml",
-              "RelativeDocumentMoniker": "ShoeStore\\SearchCatalog.xaml",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\SearchCatalog.xaml",
-              "RelativeToolTip": "ShoeStore\\SearchCatalog.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-16T04:56:00.671Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

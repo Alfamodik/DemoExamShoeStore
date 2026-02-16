@@ -10,15 +10,16 @@
     <meta charset="utf-8" />
     <title>Каталог</title>
     <link rel="stylesheet" href="~/css/catalog.css" asp-append-version="true" />
+    <link rel="icon" href="~/Resources/Icon.ico" />
 </head>
 <body>
 
     <form method="get" class="search-form">
+        <input type="hidden" name="accessRights" value="@(Model.AccessRights.HasValue ? Model.AccessRights.ToString() : "")" />
+
         <div class="catalog-header">
             <img src="~/Resources/Icon.png" class="catalog-icon" alt="icon" />
-
             <h1 class="catalog-title">Каталог</h1>
-
             <div class="logout-form">
                 <a class="btn-logout" href="/Login">Назад</a>
             </div>
@@ -38,11 +39,11 @@
                 <option value="asc" selected="@(Model.SortType == "asc")">По возрастанию</option>
             </select>
 
-            <input name="searchText" value="@Model.SearchText" placeholder="Поиск..." class="filter-input search-bar" />  <!--oninput="this.form.submit()"-->
+            <input name="searchText" value="@Model.SearchText" placeholder="Поиск..." class="filter-input search-bar" />
         </div>
 
         <div class="actions">
-            <a class="btn-add" href="/ProductEditWindow">Добавить товар</a>
+            <a class="btn-add" href="/ProductEditWindow?accessRights=@Model.AccessRights">Добавить товар</a>
         </div>
 
         <div class="products-list">
@@ -52,9 +53,12 @@
             }
             else
             {
-                foreach (var product in Model.Products)
+                @foreach (var product in Model.Products!)
                 {
-                    @await Html.PartialAsync("ProductUserControl", product)
+                    @await Html.PartialAsync("ProductUserControl", product, new ViewDataDictionary(ViewData)
+                   {
+                       ["AccessRights"] = Model.AccessRights
+                   })
                 }
             }
         </div>

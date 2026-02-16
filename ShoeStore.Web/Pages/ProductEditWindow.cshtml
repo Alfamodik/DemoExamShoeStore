@@ -10,6 +10,7 @@
     <meta charset="utf-8" />
     <title>Товар</title>
     <link rel="stylesheet" href="~/css/productEdit.css" />
+    <link rel="icon" href="~/Resources/Icon.ico" />
 </head>
 <body>
 
@@ -36,7 +37,11 @@
         <input asp-for="Cost" />
 
         <label>Ед. измерения</label>
-        <input asp-for="Unit" />
+        <select asp-for="Unit">
+            <option value="шт.">шт.</option>
+            <option value="л.">л.</option>
+            <option value="кг.">кг.</option>
+        </select>
 
         <label>Количество на складе</label>
         <input asp-for="AmountInStorage" />
@@ -47,6 +52,7 @@
         <div class="buttons">
             <button type="submit" name="handler" value="Back">Назад</button>
             <button type="submit" name="handler" value="Save">Сохранить</button>
+            <button type="submit" name="handler" value="Delete">Удалить</button>
         </div>
 
         @if (!string.IsNullOrEmpty(Model.ErrorMessage))

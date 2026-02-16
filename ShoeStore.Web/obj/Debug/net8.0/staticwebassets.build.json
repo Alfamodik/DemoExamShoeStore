@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZN9NN5/JYt244+KlTgoHKYFdcK+RHRz2Ik2VivjG5CU=",
+  "Hash": "4/jttvPIB1Z6wVW9L7EBheLpHGU1/q1p7odCuJkDiIE=",
   "Source": "ShoeStore.Web",
   "BasePath": "_content/ShoeStore.Web",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wh79wjauxt",
-      "Integrity": "zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY=",
+      "Fingerprint": "5z0lih5qdh",
+      "Integrity": "zwGQ6lQ0sx7TteNHUWlArHvHUh7LkKdlSiZHPlzpTro=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\login.css"
@@ -1466,6 +1466,51 @@
       ]
     },
     {
+      "Route": "css/login.5z0lih5qdh.css",
+      "AssetFile": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "803"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zwGQ6lQ0sx7TteNHUWlArHvHUh7LkKdlSiZHPlzpTro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Feb 2026 07:07:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5z0lih5qdh"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zwGQ6lQ0sx7TteNHUWlArHvHUh7LkKdlSiZHPlzpTro="
+        }
+      ]
+    },
+    {
       "Route": "css/login.css",
       "AssetFile": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\wwwroot\\css\\login.css",
       "Selectors": [],
@@ -1476,7 +1521,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "882"
+          "Value": "803"
         },
         {
           "Name": "Content-Type",
@@ -1484,11 +1529,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY=\""
+          "Value": "\"zwGQ6lQ0sx7TteNHUWlArHvHUh7LkKdlSiZHPlzpTro=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Feb 2026 10:52:24 GMT"
+          "Value": "Mon, 16 Feb 2026 07:07:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1498,52 +1543,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY="
-        }
-      ]
-    },
-    {
-      "Route": "css/login.wh79wjauxt.css",
-      "AssetFile": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\wwwroot\\css\\login.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "882"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Feb 2026 10:52:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wh79wjauxt"
-        },
-        {
-          "Name": "label",
-          "Value": "css/login.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-zAXkre2IJpi87NDhSQpCBSkHsamXa0R32HdQ0cZToLY="
+          "Value": "sha256-zwGQ6lQ0sx7TteNHUWlArHvHUh7LkKdlSiZHPlzpTro="
         }
       ]
     },

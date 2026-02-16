@@ -39,12 +39,28 @@
             Text="Вход"
             HorizontalAlignment="Center"
             FontSize="24"/>
-        
+
+        <TextBlock
+            Grid.Column="0"
+            Grid.Row="3"
+            FontSize="14"
+            HorizontalAlignment="Right"
+            Text="Почта"
+            Margin="5"/>
+
         <TextBox
             Grid.Column="1"
             Grid.Row="3"
             Name="login"
             FontSize="14"/>
+
+        <TextBlock
+            Grid.Column="0"
+            Grid.Row="5"
+            FontSize="14"
+            HorizontalAlignment="Right"
+            Text="Пароль"
+            Margin="5"/>
 
         <TextBox
             Grid.Column="1"

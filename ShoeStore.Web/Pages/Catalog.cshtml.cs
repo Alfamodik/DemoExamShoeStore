@@ -13,8 +13,11 @@ namespace ShoeStore.Web.Pages
         public AccessRights? AccessRights { get; set; }
         public int? UserId { get; set; }
 
-        public void OnGet()
+        public void OnGet(string? accessRights)
         {
+            if (Enum.TryParse(accessRights, true, out AccessRights parsedAccess))
+                AccessRights = parsedAccess;
+
             Products = [.. ShoeStoreContext.Instance.Products
                 .Include(p => p.ProductCategory)
                 .Include(p => p.Manufacturer)

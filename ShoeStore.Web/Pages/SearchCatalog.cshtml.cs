@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using ShoeStore.Core;
 using ShoeStore.Core.Model;
 
 namespace ShoeStore.Web.Pages
@@ -9,12 +10,16 @@ namespace ShoeStore.Web.Pages
         public List<Product> Products { get; private set; } = new();
         public List<string> Suppliers { get; private set; } = new();
 
+        public AccessRights? AccessRights { get; set; }
         public string SelectedSupplier { get; set; } = string.Empty;
         public string SortType { get; set; } = "desc";
         public string SearchText { get; set; } = string.Empty;
 
-        public void OnGet(string? selectedSupplier, string? sortType, string? searchText)
+        public void OnGet(string? selectedSupplier, string? sortType, string? searchText, string? accessRights)
         {
+            if (Enum.TryParse(accessRights, true, out AccessRights parsedAccess))
+                AccessRights = parsedAccess;
+
             SelectedSupplier = selectedSupplier ?? string.Empty;
             SortType = string.IsNullOrWhiteSpace(sortType) ? "desc" : sortType;
             SearchText = searchText ?? string.Empty;

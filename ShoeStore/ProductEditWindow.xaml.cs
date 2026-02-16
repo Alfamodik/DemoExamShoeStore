@@ -150,6 +150,12 @@ namespace ShoeStore
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(DescriptionTextBox.Text) || DescriptionTextBox.Text.Length > 255)
+            {
+                MessageBox.Show("Введите описание товара не более 255 символов.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             _product.Product1 = NameTextBox.Text;
             _product.Description = DescriptionTextBox.Text;
             _product.SupplierId = (SupplierComboBox.SelectedItem as Supplier)!.Id;
