@@ -90,7 +90,15 @@
             Margin="5"
             FontSize="20"
             Click="OpenAddProductWindow"/>
-        
+
+        <Button
+            Grid.Row="2"
+            Grid.Column="3"
+            Content="Заказы"
+            Margin="5"
+            FontSize="20"
+            Click="OpenOrders"/>
+
         <ListBox
             Name="ProductsListBox"
             Grid.Column="0"

@@ -1,12 +1,70 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\ordereditwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\ordereditwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\orders.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\orders.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore\\orders.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72DC4FF3-A0CD-4FF3-91E7-C931577959E8}|ShoeStore\\ShoeStore.csproj|solutionrelative:shoestore\\orders.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderEditWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\OrderEditWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ShoeStore\\OrderEditWindow.xaml.cs",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\OrderEditWindow.xaml.cs",
+              "RelativeToolTip": "ShoeStore\\OrderEditWindow.xaml.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwFcAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T13:13:44.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Orders.xaml",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\Orders.xaml",
+              "RelativeDocumentMoniker": "ShoeStore\\Orders.xaml",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\Orders.xaml",
+              "RelativeToolTip": "ShoeStore\\Orders.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-16T13:12:49.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Orders.xaml.cs",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\Orders.xaml.cs",
+              "RelativeDocumentMoniker": "ShoeStore\\Orders.xaml.cs",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore\\Orders.xaml.cs",
+              "RelativeToolTip": "ShoeStore\\Orders.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAApwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T12:42:32.38Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

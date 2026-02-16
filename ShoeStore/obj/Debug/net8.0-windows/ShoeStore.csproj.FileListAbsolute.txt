@@ -114,3 +114,9 @@ F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\ProductEditW
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\ProductEditWindow.g.cs
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\bin\Debug\net8.0-windows\ShoeStore.Core.dll
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\bin\Debug\net8.0-windows\ShoeStore.Core.pdb
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\OrderUserControl.baml
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\Orders.g.cs
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\OrderUserControl.g.cs
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\Orders.baml
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\OrderEditWindow.baml
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore\obj\Debug\net8.0-windows\OrderEditWindow.g.cs

@@ -100,5 +100,11 @@ namespace ShoeStore
             new ProductEditWindow(_accessRights, _user, selectedProduct).Show();
             Close();
         }
+
+        private void OpenOrders(object sender, RoutedEventArgs e)
+        {
+            new Orders(_accessRights, _user).Show();
+            Close();
+        }
     }
 }

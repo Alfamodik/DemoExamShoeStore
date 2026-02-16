@@ -13,4 +13,6 @@ public partial class PickUpPoint
     public string? HomeNumber { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+
+    public string Address => $"{Sity} {Street} {HomeNumber}";
 }

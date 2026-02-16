@@ -47,4 +47,6 @@ public partial class Product
             return cost.ToString("F2", culture);
         }
     }
+
+    public string DisplayName => $"{Article} {Product1} {Cost}";
 }

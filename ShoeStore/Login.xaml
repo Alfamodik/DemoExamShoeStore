@@ -52,6 +52,7 @@
             Grid.Column="1"
             Grid.Row="3"
             Name="login"
+            Text="94d5ous@gmail.com"
             FontSize="14"/>
 
         <TextBlock
@@ -66,6 +67,7 @@
             Grid.Column="1"
             Grid.Row="5"
             Name="password"
+            Text="uzWC67"
             FontSize="14"/>
 
         <Button

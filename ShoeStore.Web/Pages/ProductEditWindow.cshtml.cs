@@ -29,9 +29,7 @@ namespace ShoeStore.Web.Pages
         public List<SelectListItem> ManufacturerItems { get; private set; } = new();
         public List<SelectListItem> CategoryItems { get; private set; } = new();
 
-        private bool _isEdit;
-
-        public AccessRights? AccessRights { get; set; } // Сохраняем текущие права
+        public AccessRights? AccessRights { get; set; }
 
         public void OnGet(string? article, string? accessRights)
         {
@@ -48,8 +46,6 @@ namespace ShoeStore.Web.Pages
 
             if (product == null)
                 return;
-
-            _isEdit = true;
 
             Article = product.Article;
             Name = product.Product1;
