@@ -1,0 +1,16 @@
+﻿@model ShoeStore.Core.Model.Order
+<div style="border:1px solid #ddd; padding:12px; border-radius:6px; display:flex; align-items:center; gap:12px;">
+    <div style="flex:1;">
+        <div style="display:flex; justify-content:space-between;">
+            <div>
+                <div>Артикул товара: @Model.ProductArticle</div>
+                <div>Статус заказа: @Model.Status</div>
+                <div>Адрес пункта выдачи: @Model.PickUpPoint?.Address</div>
+                <div>Дата заказа: @Model.DateOrder?.ToString("yyyy-MM-dd")</div>
+            </div>
+            <div style="text-align:right;">
+                <div>Дата доставки: @Model.DateDelivery?.ToString("dd.MM.yyyy")</div>
+            </div>
+        </div>
+    </div>
+</div>

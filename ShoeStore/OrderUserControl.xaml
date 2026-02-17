@@ -13,7 +13,7 @@
         <StackPanel 
             Grid.Column="0"
             Orientation="Vertical">
-            <TextBlock Text="{Binding ProductArticle, StringFormat='{}Артикул заказа: {0}'}"/>
+            <TextBlock Text="{Binding ProductArticle, StringFormat='{}Артикул товара {0}'}"/>
             <TextBlock Text="{Binding Status, StringFormat='{}Статус заказа: {0}'}"/>
             <TextBlock Text="{Binding PickUpPoint.Address, StringFormat='{}Адрес пункта выдачи: {0}'}" />
             <TextBlock Text="{Binding DateOrder, StringFormat='{}Дата заказа: {0:dd.MM.yyyy}'}"/>

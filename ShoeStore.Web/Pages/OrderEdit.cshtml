@@ -1,0 +1,73 @@
+﻿@page
+@model ShoeStore.Web.Pages.OrderEditModel
+@{
+    Layout = null;
+}
+
+<form method="post">
+    <input asp-for="OrderId" type="hidden" />
+    <input asp-for="AccessRights" type="hidden" />
+
+    <div>
+        <label>Товар</label>
+        <select asp-for="SelectedProductArticle" asp-items="Model.Products">
+        </select>
+    </div>
+
+    <div>
+        <label>Количество</label>
+        <input asp-for="Amount" type="number" min="1" />
+    </div>
+
+    <div>
+        <label>Дата заказа</label>
+        <input asp-for="DateOrder" type="date" />
+    </div>
+
+    <div>
+        <label>Дата доставки</label>
+        <input asp-for="DateDelivery" type="date" />
+    </div>
+
+    <div>
+        <label>Пункт выдачи</label>
+        <select asp-for="SelectedPickUpPointId" asp-items="Model.PickUpPoints">
+        </select>
+    </div>
+
+    <div>
+        <label>Пользователь</label>
+        <select asp-for="SelectedUserId" asp-items="Model.Users">
+        </select>
+    </div>
+
+    <div>
+        <label>Код получения</label>
+        <input asp-for="Code" maxlength="10" />
+    </div>
+
+    <div>
+        <label>Статус</label>
+        <select asp-for="Status">
+            <option value="Новый">Новый</option>
+            <option value="Завершен">Завершен</option>
+        </select>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="error" style="color:red; margin-bottom:10px;">
+            @Model.ErrorMessage
+        </div>
+    }
+
+    <div style="margin-top:12px;">
+        <a asp-page="/Orders" asp-route-accessRights="@Model.AccessRights" class="button">Назад</a>
+        <button type="submit">Сохранить</button>
+        <button asp-page-handler="Delete" type="submit">Удалить</button>
+    </div>
+
+    <div>
+        <span asp-validation-summary="ModelOnly"></span>
+    </div>
+</form>

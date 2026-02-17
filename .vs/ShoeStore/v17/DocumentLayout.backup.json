@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore.web\\pages\\orderedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|solutionrelative:shoestore.web\\pages\\orderedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore.web\\pages\\orderedit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|solutionrelative:shoestore.web\\pages\\orderedit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore.web\\pages\\orders.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|solutionrelative:shoestore.web\\pages\\orders.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderEdit.cshtml",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\OrderEdit.cshtml",
+              "RelativeDocumentMoniker": "ShoeStore.Web\\Pages\\OrderEdit.cshtml",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\OrderEdit.cshtml",
+              "RelativeToolTip": "ShoeStore.Web\\Pages\\OrderEdit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-17T12:43:36.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderEdit.cshtml.cs",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\OrderEdit.cshtml.cs",
+              "RelativeDocumentMoniker": "ShoeStore.Web\\Pages\\OrderEdit.cshtml.cs",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\OrderEdit.cshtml.cs",
+              "RelativeToolTip": "ShoeStore.Web\\Pages\\OrderEdit.cshtml.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAQwJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T12:42:56.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Orders.cshtml.cs",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\Orders.cshtml.cs",
+              "RelativeDocumentMoniker": "ShoeStore.Web\\Pages\\Orders.cshtml.cs",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\Orders.cshtml.cs",
+              "RelativeToolTip": "ShoeStore.Web\\Pages\\Orders.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T12:41:46.927Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

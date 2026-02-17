@@ -46,6 +46,13 @@
             <a class="btn-add" href="/ProductEditWindow?accessRights=@Model.AccessRights">Добавить товар</a>
         </div>
 
+        @if (Model.AccessRights == Core.AccessRights.Manager || Model.AccessRights == Core.AccessRights.Admin)
+        {
+            <div class="actions">
+                <a class="btn-add" href="/Orders?accessRights=@Model.AccessRights">Заказы</a>
+            </div>
+        }
+
         <div class="products-list">
             @if (!Model.Products.Any())
             {

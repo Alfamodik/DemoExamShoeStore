@@ -36,6 +36,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Alfamod/Projects/VS/ShoeStore/ShoeStore.Web/Pages/OrderEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Alfamod/Projects/VS/ShoeStore/ShoeStore.Web/Pages/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Alfamod/Projects/VS/ShoeStore/ShoeStore.Web/Pages/OrderUserControl.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJVc2VyQ29udHJvbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Alfamod/Projects/VS/ShoeStore/ShoeStore.Web/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

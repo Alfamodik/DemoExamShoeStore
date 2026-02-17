@@ -1,0 +1,39 @@
+﻿@page
+@model ShoeStore.Web.Pages.OrdersModel
+@{
+    Layout = null;
+}
+
+<div style="padding:16px; max-width:1200px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
+        <img src="~/Resources/Icon.png" style="height:80px;" alt="icon" />
+        <h1 style="flex:1; text-align:center; font-size:40px;">Заказы</h1>
+
+        @if (Model.AccessRights == ShoeStore.Core.AccessRights.Admin)
+        {
+            <a asp-page="/OrderEdit" asp-route-accessRights="@Model.AccessRights" class="btn" style="background:MediumSpringGreen; padding:8px 14px; text-decoration:none;">Создать</a>
+        }
+        <a asp-page="/SearchCatalog" asp-route-accessRights="@Model.AccessRights" class="btn" style="background:MediumSpringGreen; padding:8px 14px; text-decoration:none;">Назад</a>
+    </div>
+
+    <div>
+        @if (Model.Orders?.Any() != true)
+        {
+            <p>Заказов нет.</p>
+        }
+        else
+        {
+            <div style="display:flex; flex-direction:column; gap:8px;">
+                @foreach (var order in Model.Orders)
+                {
+                    <a asp-page="/OrderEdit"
+                       asp-route-id="@order.Id"
+                       asp-route-accessRights="@Model.AccessRights"
+                       style="display:block; text-decoration:none; color:inherit;">
+                        <partial name="OrderUserControl" model="order" />
+                    </a>
+                }
+            </div>
+        }
+    </div>
+</div>
