@@ -52,7 +52,7 @@ namespace ShoeStore {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ShoeStore;component/orderusercontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ShoeStore;V1.0.0.0;component/orderusercontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\OrderUserControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

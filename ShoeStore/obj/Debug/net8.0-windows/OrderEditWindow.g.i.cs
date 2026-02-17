@@ -116,7 +116,7 @@ namespace ShoeStore {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ShoeStore;component/ordereditwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ShoeStore;V1.0.0.0;component/ordereditwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\OrderEditWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
