@@ -858,6 +858,20 @@
         "runtime": {
           "bin/placeholder/ShoeStore.Core.dll": {}
         }
+      },
+      "ShoeStore.Core2/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.23",
+          "Pomelo.EntityFrameworkCore.MySql": "8.0.3"
+        },
+        "compile": {
+          "bin/placeholder/ShoeStore.Core2.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShoeStore.Core2.dll": {}
+        }
       }
     }
   },
@@ -2193,6 +2207,11 @@
       "type": "project",
       "path": "../ShoeStore.Core/ShoeStore.Core.csproj",
       "msbuildProject": "../ShoeStore.Core/ShoeStore.Core.csproj"
+    },
+    "ShoeStore.Core2/1.0.0": {
+      "type": "project",
+      "path": "../ShoeStore.Core2/ShoeStore.Core2.csproj",
+      "msbuildProject": "../ShoeStore.Core2/ShoeStore.Core2.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2202,6 +2221,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.23",
       "Pomelo.EntityFrameworkCore.MySql >= 8.0.3",
       "ShoeStore.Core >= 1.0.0",
+      "ShoeStore.Core2 >= 1.0.0",
       "SixLabors.ImageSharp >= 3.1.12"
     ]
   },
@@ -2237,6 +2257,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Core2\\ShoeStore.Core2.csproj": {
+              "projectPath": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Core2\\ShoeStore.Core2.csproj"
+            },
             "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Core\\ShoeStore.Core.csproj": {
               "projectPath": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Core\\ShoeStore.Core.csproj"
             }

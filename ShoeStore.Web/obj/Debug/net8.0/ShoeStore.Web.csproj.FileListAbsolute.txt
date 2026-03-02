@@ -116,3 +116,5 @@ F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\obj\Debug\net8.0\ref\ShoeStore.We
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\bin\Debug\net8.0\ShoeStore.Core.dll
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\bin\Debug\net8.0\ShoeStore.Core.pdb
 F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\bin\Debug\net8.0\SixLabors.ImageSharp.dll
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\bin\Debug\net8.0\ShoeStore.Core2.dll
+F:\Alfamod\Projects\VS\ShoeStore\ShoeStore.Web\bin\Debug\net8.0\ShoeStore.Core2.pdb

@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "8.0.23",
           "Pomelo.EntityFrameworkCore.MySql": "8.0.3",
           "ShoeStore.Core": "1.0.0",
+          "ShoeStore.Core2": "1.0.0",
           "SixLabors.ImageSharp": "3.1.12"
         },
         "runtime": {
@@ -539,6 +540,18 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "ShoeStore.Core2/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.23",
+          "Pomelo.EntityFrameworkCore.MySql": "8.0.3"
+        },
+        "runtime": {
+          "ShoeStore.Core2.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -829,6 +842,11 @@
       "hashPath": "system.threading.channels.6.0.0.nupkg.sha512"
     },
     "ShoeStore.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ShoeStore.Core2/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
