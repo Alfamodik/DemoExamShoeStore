@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ShoeStore.Core;
-using ShoeStore.Core.Model;
+using ShoeStore.Web.Model;
 
 namespace ShoeStore.Web.Pages
 {
@@ -11,20 +11,22 @@ namespace ShoeStore.Web.Pages
         public List<string> Suppliers { get; private set; } = new();
 
         public AccessRights? AccessRights { get; set; }
+        public int UserId { get; private set; }
         public string SelectedSupplier { get; set; } = string.Empty;
         public string SortType { get; set; } = "desc";
         public string SearchText { get; set; } = string.Empty;
 
-        public void OnGet(string? selectedSupplier, string? sortType, string? searchText, string? accessRights)
+        public void OnGet(string? selectedSupplier, string? sortType, string? searchText, string? accessRights, int userId)
         {
             if (Enum.TryParse(accessRights, true, out AccessRights parsedAccess))
                 AccessRights = parsedAccess;
 
+            UserId = userId;
             SelectedSupplier = selectedSupplier ?? string.Empty;
             SortType = string.IsNullOrWhiteSpace(sortType) ? "desc" : sortType;
             SearchText = searchText ?? string.Empty;
 
-            using ShoeStoreContext context = new();
+            using ShoeStore2Context context = new();
 
             Suppliers = context.Suppliers
                 .Select(s => s.Supplier1!)

@@ -24,7 +24,8 @@
     {
         @await Html.PartialAsync("ProductUserControl", product, new ViewDataDictionary(ViewData)
         {
-            ["AccessRights"] = Model.AccessRights
+            ["AccessRights"] = Model.AccessRights,
+            ["UserId"] = Model.UserId
         })
     }
 </div>

@@ -6,9 +6,10 @@
 
 <form method="post">
     <input asp-for="OrderId" type="hidden" />
+    <input asp-for="UserId" type="hidden" />
     <input asp-for="AccessRights" type="hidden" />
 
-    <div>
+    <!--<div>
         <label>Товар</label>
         <select asp-for="SelectedProductArticle" asp-items="Model.Products">
         </select>
@@ -17,7 +18,7 @@
     <div>
         <label>Количество</label>
         <input asp-for="Amount" type="number" min="1" />
-    </div>
+    </div>-->
 
     <div>
         <label>Дата заказа</label>
@@ -62,7 +63,7 @@
     }
 
     <div style="margin-top:12px;">
-        <a asp-page="/Orders" asp-route-accessRights="@Model.AccessRights" class="button">Назад</a>
+        <a asp-page="/Orders" asp-route-accessRights="@Model.AccessRights" asp-route-userId="@Model.UserId" class="button">Назад</a>
         <button type="submit">Сохранить</button>
         <button asp-page-handler="Delete" type="submit">Удалить</button>
     </div>

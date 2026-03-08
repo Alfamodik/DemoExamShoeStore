@@ -1,75 +1,106 @@
 ﻿@page
 @model ShoeStore.Web.Pages.SearchCatalogModel
+@using ShoeStore.Core
+
 @{
     Layout = null;
+    ViewData["AccessRights"] = Model.AccessRights;
+    ViewData["UserId"] = Model.UserId;
 }
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8" />
-    <title>Каталог</title>
-    <link rel="stylesheet" href="~/css/catalog.css" asp-append-version="true" />
-    <link rel="icon" href="~/Resources/Icon.ico" />
-</head>
-<body>
+<link rel="stylesheet" href="~/css/catalog.css" asp-append-version="true" />
+<link rel="icon" href="~/Resources/Icon.ico" />
 
-    <form method="get" class="search-form">
-        <input type="hidden" name="accessRights" value="@(Model.AccessRights.HasValue ? Model.AccessRights.ToString() : "")" />
+<div class="catalog-header">
+    <img src="~/Resources/Icon.png" class="catalog-icon" alt="icon" />
 
-        <div class="catalog-header">
-            <img src="~/Resources/Icon.png" class="catalog-icon" alt="icon" />
-            <h1 class="catalog-title">Каталог</h1>
-            <div class="logout-form">
-                <a class="btn-logout" href="/Login">Назад</a>
-            </div>
-        </div>
+    <h1 class="catalog-title">Каталог</h1>
 
-        <div class="filters">
-            <select name="selectedSupplier" onchange="this.form.submit()" class="filter-input">
-                <option value="">Все поставщики</option>
-                @foreach (var s in Model.Suppliers)
-                {
-                    <option value="@s" selected="@(s == Model.SelectedSupplier)">@s</option>
-                }
-            </select>
+    <a class="btn-logout" href="/Login">Назад</a>
+</div>
 
-            <select name="sortType" onchange="this.form.submit()" class="filter-input">
-                <option value="desc" selected="@(Model.SortType == "desc")">По убыванию</option>
-                <option value="asc" selected="@(Model.SortType == "asc")">По возрастанию</option>
-            </select>
 
-            <input name="searchText" value="@Model.SearchText" placeholder="Поиск..." class="filter-input search-bar" />
-        </div>
+<form method="get" class="search-form">
+    <input type="hidden" name="accessRights"
+           value="@(Model.AccessRights.HasValue ? Model.AccessRights.ToString() : "")" />
+    <input type="hidden" name="userId" value="@Model.UserId" />
 
-        <div class="actions">
-            <a class="btn-add" href="/ProductEditWindow?accessRights=@Model.AccessRights">Добавить товар</a>
-        </div>
+    <div class="filters">
+        <select name="selectedSupplier"
+                onchange="this.form.submit()"
+                class="filter-input">
+            <option value="">Все поставщики</option>
+            @foreach (string supplier in Model.Suppliers)
+            {
+                <option value="@supplier"
+                        selected="@(supplier == Model.SelectedSupplier)">
+                    @supplier
+                </option>
+            }
+        </select>
 
-        @if (Model.AccessRights == Core.AccessRights.Manager || Model.AccessRights == Core.AccessRights.Admin)
+        <select name="sortType"
+                onchange="this.form.submit()"
+                class="filter-input">
+            <option value="desc"
+                    selected="@(Model.SortType == "desc")">
+                По убыванию
+            </option>
+            <option value="asc"
+                    selected="@(Model.SortType == "asc")">
+                По возрастанию
+            </option>
+        </select>
+
+        <input name="searchText"
+               value="@Model.SearchText"
+               placeholder="Поиск..."
+               class="filter-input search-bar" />
+    </div>
+</form>
+
+
+@if (Model.AccessRights == AccessRights.Manager ||
+    Model.AccessRights == AccessRights.Admin)
+{
+    <div class="actions">
+        <a class="btn-add"
+           href="/ProductEditWindow?accessRights=@Model.AccessRights&userId=@Model.UserId">
+            Добавить товар
+        </a>
+
+        <a class="btn-add"
+           href="/Orders?accessRights=@Model.AccessRights&userId=@Model.UserId">
+            Заказы
+        </a>
+
+        <a class="btn-add"
+           href="/Cart?accessRights=@Model.AccessRights&userId=@Model.UserId">
+            Корзина
+        </a>
+
+        <p>@Model.AccessRights</p>
+    </div>
+}
+
+
+<div class="products-list">
+    @if (!Model.Products.Any())
+    {
+        <div class="no-products">Товаров нет.</div>
+    }
+    else
+    {
+        foreach (Model.Product product in Model.Products)
         {
-            <div class="actions">
-                <a class="btn-add" href="/Orders?accessRights=@Model.AccessRights">Заказы</a>
-            </div>
+            @await Html.PartialAsync(
+                    "ProductUserControl",
+                    product,
+                    new ViewDataDictionary(ViewData)
+    {
+        ["AccessRights"] = Model.AccessRights,
+        ["UserId"] = Model.UserId
+    })
         }
-
-        <div class="products-list">
-            @if (!Model.Products.Any())
-            {
-                <div class="no-products">Товаров нет.</div>
-            }
-            else
-            {
-                @foreach (var product in Model.Products!)
-                {
-                    @await Html.PartialAsync("ProductUserControl", product, new ViewDataDictionary(ViewData)
-                   {
-                       ["AccessRights"] = Model.AccessRights
-                   })
-                }
-            }
-        </div>
-    </form>
-
-</body>
-</html>
+    }
+</div>

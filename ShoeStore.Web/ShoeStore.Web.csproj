@@ -27,11 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ShoeStore.Core2\ShoeStore.Core2.csproj" />
-    <ProjectReference Include="..\ShoeStore.Core\ShoeStore.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Pages\Resources\Icon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

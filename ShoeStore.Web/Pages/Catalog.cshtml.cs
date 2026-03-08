@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ShoeStore.Core;
-using ShoeStore.Core.Model;
+using ShoeStore.Web.Model;
 
 namespace ShoeStore.Web.Pages
 {
@@ -13,12 +13,16 @@ namespace ShoeStore.Web.Pages
         public AccessRights? AccessRights { get; set; }
         public int? UserId { get; set; }
 
-        public void OnGet(string? accessRights)
+        public void OnGet(string? accessRights, int userId)
         {
+            UserId = userId;
+
             if (Enum.TryParse(accessRights, true, out AccessRights parsedAccess))
                 AccessRights = parsedAccess;
 
-            Products = [.. ShoeStoreContext.Instance.Products
+            ShoeStore2Context context = new();
+
+            Products = [.. context.Products
                 .Include(p => p.ProductCategory)
                 .Include(p => p.Manufacturer)
                 .Include(p => p.Supplier)

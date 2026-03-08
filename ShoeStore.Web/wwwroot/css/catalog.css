@@ -139,3 +139,12 @@
 .product-item.discount-high * {
     color: black;
 }
+
+.product-card-link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}

@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FAD38E1-47E9-4080-84B6-7E9FB2B052B5}|ShoeStore.Core2\\ShoeStore.Core2.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore.core2\\shoestore.core2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2FAD38E1-47E9-4080-84B6-7E9FB2B052B5}|ShoeStore.Core2\\ShoeStore.Core2.csproj|solutionrelative:shoestore.core2\\shoestore.core2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore.web\\pages\\orderedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|solutionrelative:shoestore.web\\pages\\orderedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore.web\\pages\\orderedit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|solutionrelative:shoestore.web\\pages\\orderedit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore.web\\pages\\producteditwindow.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|solutionrelative:shoestore.web\\pages\\producteditwindow.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|f:\\alfamod\\projects\\vs\\shoestore\\shoestore.web\\pages\\producteditwindow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8829AF62-03E2-4740-9100-E51C14D2BB77}|ShoeStore.Web\\ShoeStore.Web.csproj|solutionrelative:shoestore.web\\pages\\producteditwindow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductEditWindow.cshtml.cs",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\ProductEditWindow.cshtml.cs",
+              "RelativeDocumentMoniker": "ShoeStore.Web\\Pages\\ProductEditWindow.cshtml.cs",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\ProductEditWindow.cshtml.cs",
+              "RelativeToolTip": "ShoeStore.Web\\Pages\\ProductEditWindow.cshtml.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T05:00:13.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductEditWindow.cshtml",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\ProductEditWindow.cshtml",
+              "RelativeDocumentMoniker": "ShoeStore.Web\\Pages\\ProductEditWindow.cshtml",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\ProductEditWindow.cshtml",
+              "RelativeToolTip": "ShoeStore.Web\\Pages\\ProductEditWindow.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB4AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T04:59:56.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderEdit.cshtml.cs",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\OrderEdit.cshtml.cs",
+              "RelativeDocumentMoniker": "ShoeStore.Web\\Pages\\OrderEdit.cshtml.cs",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\OrderEdit.cshtml.cs",
+              "RelativeToolTip": "ShoeStore.Web\\Pages\\OrderEdit.cshtml.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAADYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T04:57:49.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ShoeStore.Core2",
-              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Core2\\ShoeStore.Core2.csproj",
-              "RelativeDocumentMoniker": "ShoeStore.Core2\\ShoeStore.Core2.csproj",
-              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Core2\\ShoeStore.Core2.csproj",
-              "RelativeToolTip": "ShoeStore.Core2\\ShoeStore.Core2.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-02T16:50:09.044Z",
+              "Title": "OrderEdit.cshtml",
+              "DocumentMoniker": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\OrderEdit.cshtml",
+              "RelativeDocumentMoniker": "ShoeStore.Web\\Pages\\OrderEdit.cshtml",
+              "ToolTip": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\Pages\\OrderEdit.cshtml",
+              "RelativeToolTip": "ShoeStore.Web\\Pages\\OrderEdit.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAEMAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T04:57:33.188Z",
               "EditorCaption": ""
             }
           ]

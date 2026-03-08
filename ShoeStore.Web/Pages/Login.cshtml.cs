@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ShoeStore.Core;
-using ShoeStore.Core.Model;
+using ShoeStore.Web.Model;
 
 namespace ShoeStore.Web.Pages;
 
@@ -17,7 +17,9 @@ public class LoginModel : PageModel
 
     public IActionResult OnPostLogin()
     {
-        User? user = ShoeStoreContext.Instance.Users
+        ShoeStore2Context context = new();
+
+        User? user = context.Users
             .FirstOrDefault(user => user.Login == Login && user.Password == Password);
 
         if (user == null)
@@ -27,12 +29,12 @@ public class LoginModel : PageModel
         }
 
         if (user.Role == "Менеджер")
-            return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights.Manager });
+            return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights.Manager, userId = user.Id });
 
         if (user.Role == "Администратор")
-            return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights.Admin });
+            return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights.Admin, userId = user.Id });
 
-        return RedirectToPage("/Catalog", new { accessRights = AccessRights.User });
+        return RedirectToPage("/Catalog", new { accessRights = AccessRights.User, userId = user.Id });
     }
 
     public IActionResult OnPostGuest()

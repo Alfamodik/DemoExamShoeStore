@@ -11,9 +11,9 @@
 
         @if (Model.AccessRights == ShoeStore.Core.AccessRights.Admin)
         {
-            <a asp-page="/OrderEdit" asp-route-accessRights="@Model.AccessRights" class="btn" style="background:MediumSpringGreen; padding:8px 14px; text-decoration:none;">Создать</a>
+            <a asp-page="/OrderEdit" asp-route-userId="@Model.UserId" asp-route-accessRights="@Model.AccessRights" class="btn" style="background:MediumSpringGreen; padding:8px 14px; text-decoration:none;">Создать</a>
         }
-        <a asp-page="/SearchCatalog" asp-route-accessRights="@Model.AccessRights" class="btn" style="background:MediumSpringGreen; padding:8px 14px; text-decoration:none;">Назад</a>
+        <a asp-page="/SearchCatalog" asp-route-userId="@Model.UserId" asp-route-accessRights="@Model.AccessRights" class="btn" style="background:MediumSpringGreen; padding:8px 14px; text-decoration:none;">Назад</a>
     </div>
 
     <div>
@@ -28,6 +28,7 @@
                 {
                     <a asp-page="/OrderEdit"
                        asp-route-id="@order.Id"
+                       asp-route-userId="@Model.UserId"
                        asp-route-accessRights="@Model.AccessRights"
                        style="display:block; text-decoration:none; color:inherit;">
                         <partial name="OrderUserControl" model="order" />

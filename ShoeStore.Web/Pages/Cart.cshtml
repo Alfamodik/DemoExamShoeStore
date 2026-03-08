@@ -1,0 +1,137 @@
+﻿@page
+@model ShoeStore.Web.Pages.CartModel
+@using ShoeStore.Core
+@{
+    Layout = null;
+    ViewData["Title"] = "Корзина";
+}
+
+@if (Model.Items == null || Model.Items.Count == 0)
+{
+    <div style="padding:12px; border:1px solid #ddd; border-radius:6px;">
+        Корзина пуста
+    </div>
+
+    <div style="margin-top:12px;">
+        @if (Model.AccessRights == "Manager" || Model.AccessRights == "Admin")
+        {
+            <a asp-page="/SearchCatalog"
+               asp-route-accessRights="@Model.AccessRights"
+               asp-route-userId="@Model.UserId">
+                В каталог
+            </a>
+        }
+        else
+        {
+            <a asp-page="/Catalog"
+               asp-route-accessRights="@Model.AccessRights"
+               asp-route-userId="@Model.UserId">
+                В каталог
+            </a>
+        }
+    </div>
+}
+else
+{
+    <div style="overflow:auto;">
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr style="text-align:left; border-bottom:1px solid #ddd;">
+                    <th style="padding:8px;">Товар</th>
+                    <th style="padding:8px;">Цена</th>
+                    <th style="padding:8px;">Количество</th>
+                    <th style="padding:8px;">Сумма</th>
+                    <th style="padding:8px;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cartItem in Model.Items)
+                {
+                    var product = cartItem.ProductArticleNavigation;
+
+                    <tr style="border-bottom:1px solid #eee;">
+                        <td style="padding:8px;">
+                            <div style="font-weight:600;">@product.CategoruAndName</div>
+                            <div style="opacity:0.8;">Артикул: @cartItem.ProductArticle</div>
+                        </td>
+
+                        <td style="padding:8px; white-space:nowrap;">
+                            @product.CostWithDiscount ₽
+                        </td>
+
+                        <td style="padding:8px; white-space:nowrap;">
+                            <div style="display:flex; gap:6px; align-items:center;">
+
+                                <form method="post" asp-page-handler="Dec" style="margin:0;">
+                                    <input type="hidden" name="productArticle" value="@cartItem.ProductArticle" />
+                                    <input type="hidden" name="accessRights" value="@Model.AccessRights" />
+                                    <input type="hidden" name="userId" value="@Model.UserId" />
+                                    <button type="submit">-</button>
+                                </form>
+
+                                <div style="min-width:32px; text-align:center;">
+                                    @cartItem.Amount
+                                </div>
+
+                                <form method="post" asp-page-handler="Add" style="margin:0;">
+                                    <input type="hidden" name="productArticle" value="@cartItem.ProductArticle" />
+                                    <input type="hidden" name="amount" value="1" />
+                                    <input type="hidden" name="accessRights" value="@Model.AccessRights" />
+                                    <input type="hidden" name="userId" value="@Model.UserId" />
+                                    <button type="submit">+</button>
+                                </form>
+
+                            </div>
+                        </td>
+
+                        <td style="padding:8px; white-space:nowrap;">
+                            @(product.CostWithDiscountValue * cartItem.Amount) ₽
+                        </td>
+
+                        <td style="padding:8px; white-space:nowrap;">
+                            <form method="post" asp-page-handler="Remove" style="margin:0;">
+                                <input type="hidden" name="productArticle" value="@cartItem.ProductArticle" />
+                                <input type="hidden" name="accessRights" value="@Model.AccessRights" />
+                                <input type="hidden" name="userId" value="@Model.UserId" />
+                                <button type="submit">Удалить</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td style="padding:8px;" colspan="3"><strong>Итого</strong></td>
+                    <td style="padding:8px; white-space:nowrap;"><strong>@Model.Total ₽</strong></td>
+                    <td style="padding:8px;"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div style="display:flex; gap:12px; margin-top:12px; align-items:center;">
+        <form method="post" asp-page-handler="Clear" style="margin:0;">
+            <input type="hidden" name="accessRights" value="@Model.AccessRights" />
+            <input type="hidden" name="userId" value="@Model.UserId" />
+            <button type="submit">Очистить корзину</button>
+        </form>
+
+        @if (Model.AccessRights == "Manager" || Model.AccessRights == "Admin")
+        {
+            <a asp-page="/SearchCatalog"
+               asp-route-accessRights="@Model.AccessRights"
+               asp-route-userId="@Model.UserId">
+                В каталог
+            </a>
+        }
+        else
+        {
+            <a asp-page="/Catalog"
+               asp-route-accessRights="@Model.AccessRights"
+               asp-route-userId="@Model.UserId">
+                В каталог
+            </a>
+        }
+    </div>
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jyLncEM3EUelNxKUurBqRGigFVmKfwUGhYyiUhrDFUA=",
+  "Hash": "XyggeX5eSo5THS2rfiDFH+GxPmkjgCA665FnN173NuQ=",
   "Source": "ShoeStore.Web",
   "BasePath": "_content/ShoeStore.Web",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wv89jljpj3",
-      "Integrity": "xJNBMElGufTe5O9WpOecBlSNw+779SD9UaNeUL80ob0=",
+      "Fingerprint": "t7pzoyilqx",
+      "Integrity": "aaqiQ23RgDEdkmX/IRn3CP7QIax7WEW3kBqmbOWy8MA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\catalog.css"
@@ -1394,7 +1394,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2202"
+          "Value": "2352"
         },
         {
           "Name": "Content-Type",
@@ -1402,11 +1402,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xJNBMElGufTe5O9WpOecBlSNw+779SD9UaNeUL80ob0=\""
+          "Value": "\"aaqiQ23RgDEdkmX/IRn3CP7QIax7WEW3kBqmbOWy8MA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Feb 2026 11:45:01 GMT"
+          "Value": "Tue, 03 Mar 2026 05:50:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1416,12 +1416,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xJNBMElGufTe5O9WpOecBlSNw+779SD9UaNeUL80ob0="
+          "Value": "sha256-aaqiQ23RgDEdkmX/IRn3CP7QIax7WEW3kBqmbOWy8MA="
         }
       ]
     },
     {
-      "Route": "css/catalog.wv89jljpj3.css",
+      "Route": "css/catalog.t7pzoyilqx.css",
       "AssetFile": "F:\\Alfamod\\Projects\\VS\\ShoeStore\\ShoeStore.Web\\wwwroot\\css\\catalog.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1431,7 +1431,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2202"
+          "Value": "2352"
         },
         {
           "Name": "Content-Type",
@@ -1439,11 +1439,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xJNBMElGufTe5O9WpOecBlSNw+779SD9UaNeUL80ob0=\""
+          "Value": "\"aaqiQ23RgDEdkmX/IRn3CP7QIax7WEW3kBqmbOWy8MA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Feb 2026 11:45:01 GMT"
+          "Value": "Tue, 03 Mar 2026 05:50:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1453,7 +1453,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wv89jljpj3"
+          "Value": "t7pzoyilqx"
         },
         {
           "Name": "label",
@@ -1461,7 +1461,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xJNBMElGufTe5O9WpOecBlSNw+779SD9UaNeUL80ob0="
+          "Value": "sha256-aaqiQ23RgDEdkmX/IRn3CP7QIax7WEW3kBqmbOWy8MA="
         }
       ]
     },
@@ -6572,7 +6572,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Feb 2026 12:33:14 GMT"
+          "Value": "Tue, 03 Mar 2026 04:00:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6609,7 +6609,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Feb 2026 12:33:14 GMT"
+          "Value": "Tue, 03 Mar 2026 04:00:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6654,7 +6654,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Feb 2026 12:33:14 GMT"
+          "Value": "Tue, 03 Mar 2026 04:00:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6699,7 +6699,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Feb 2026 12:33:14 GMT"
+          "Value": "Tue, 03 Mar 2026 04:00:45 GMT"
         },
         {
           "Name": "Cache-Control",

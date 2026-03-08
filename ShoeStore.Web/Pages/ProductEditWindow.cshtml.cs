@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ShoeStore.Core;
-using ShoeStore.Core.Model;
+using ShoeStore.Web.Model;
 using SixLabors.ImageSharp;
 
 namespace ShoeStore.Web.Pages
@@ -30,18 +30,22 @@ namespace ShoeStore.Web.Pages
         public List<SelectListItem> CategoryItems { get; private set; } = new();
 
         public AccessRights? AccessRights { get; set; }
+        public int UserId { get; set; }
 
-        public void OnGet(string? article, string? accessRights)
+        public void OnGet(string? article, string? accessRights, int userId)
         {
             if (Enum.TryParse(accessRights, true, out AccessRights parsedAccess))
                 AccessRights = parsedAccess;
 
+            UserId = userId;
             LoadSelects();
 
             if (string.IsNullOrWhiteSpace(article))
                 return;
+            
+            ShoeStore2Context context = new();
 
-            Product? product = ShoeStoreContext.Instance.Products
+            Product? product = context.Products
                 .FirstOrDefault(p => p.Article == article);
 
             if (product == null)
@@ -62,38 +66,42 @@ namespace ShoeStore.Web.Pages
                 ImageSrc = $"data:image/png;base64,{Convert.ToBase64String(product.Image)}";
         }
 
-        public IActionResult OnPost(string handler, string? accessRights)
+        public IActionResult OnPost(string handler, string? accessRights, int userId)
         {
             if (Enum.TryParse(accessRights, true, out AccessRights parsedAccess))
                 AccessRights = parsedAccess;
 
+            UserId = userId;
             LoadSelects();
 
             if (handler == "Back")
-                return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights?.ToString() });
+                return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights, userId = UserId });
+
+            ShoeStore2Context context = new();
 
             if (handler == "Delete")
             {
                 if (string.IsNullOrWhiteSpace(Article))
-                    return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights?.ToString() });
+                    return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights, userId = UserId });
 
-                Product? productToDelete = ShoeStoreContext.Instance.Products
-                    .Include(p => p.Orders)
+                Product? productToDelete = context.Products
+                    //.Include(p => p.Orders)
                     .FirstOrDefault(p => p.Article == Article);
 
                 if (productToDelete == null)
-                    return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights?.ToString() });
+                    return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights, userId = UserId });
 
-                if (productToDelete.Orders.Count != 0)
+                if (context.OrderItems.Any(oi => oi.ProductArticle == productToDelete.Article))
+                //if (productToDelete.Orders.Count != 0)
                 {
                     ErrorMessage = "Нельзя удалить товар с заказами.";
                     return Page();
                 }
 
-                ShoeStoreContext.Instance.Products.Remove(productToDelete);
-                ShoeStoreContext.Instance.SaveChanges();
+                context.Products.Remove(productToDelete);
+                context.SaveChanges();
 
-                return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights?.ToString() });
+                return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights, userId = UserId });
             }
 
             if (!Validate())
@@ -102,7 +110,7 @@ namespace ShoeStore.Web.Pages
             Product? product = null;
 
             if (!string.IsNullOrWhiteSpace(Article))
-                product = ShoeStoreContext.Instance.Products
+                product = context.Products
                     .FirstOrDefault(p => p.Article == Article);
 
             if (product == null)
@@ -111,7 +119,7 @@ namespace ShoeStore.Web.Pages
                 {
                     Article = GenerateUniqueArticle()
                 };
-                ShoeStoreContext.Instance.Products.Add(product);
+                context.Products.Add(product);
             }
 
             product.Product1 = Name;
@@ -131,9 +139,9 @@ namespace ShoeStore.Web.Pages
                 product.Image = ms.ToArray();
             }
 
-            ShoeStoreContext.Instance.SaveChanges();
+            context.SaveChanges();
 
-            return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights?.ToString() });
+            return RedirectToPage("/SearchCatalog", new { accessRights = AccessRights, userId = UserId });
         }
 
         private bool Validate()
@@ -195,22 +203,26 @@ namespace ShoeStore.Web.Pages
 
         private void LoadSelects()
         {
-            SupplierItems = ShoeStoreContext.Instance.Suppliers
+            ShoeStore2Context context = new();
+
+            SupplierItems = context.Suppliers
                 .Select(s => new SelectListItem(s.Supplier1, s.Id.ToString()))
                 .ToList();
 
-            ManufacturerItems = ShoeStoreContext.Instance.Manufacturers
+            ManufacturerItems = context.Manufacturers
                 .Select(m => new SelectListItem(m.Manufacturer1, m.Id.ToString()))
                 .ToList();
 
-            CategoryItems = ShoeStoreContext.Instance.ProductCategories
+            CategoryItems = context.ProductCategories
                 .Select(c => new SelectListItem(c.ProductCategory1, c.Id.ToString()))
                 .ToList();
         }
 
         public static string GenerateUniqueArticle()
         {
-            List<string> existing = ShoeStoreContext.Instance.Products.Select(p => p.Article).ToList();
+            ShoeStore2Context context = new();
+
+            List<string> existing = context.Products.Select(p => p.Article).ToList();
             string article;
 
             do article = GenerateArticle();
