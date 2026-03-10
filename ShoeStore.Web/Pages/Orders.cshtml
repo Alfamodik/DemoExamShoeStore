@@ -2,6 +2,8 @@
 @model ShoeStore.Web.Pages.OrdersModel
 @{
     Layout = null;
+    ViewData["UserId"] = Model.UserId;
+    ViewData["AccessRights"] = Model.AccessRights;
 }
 
 <div style="padding:16px; max-width:1200px; margin:0 auto;">
@@ -24,17 +26,20 @@
         else
         {
             <div style="display:flex; flex-direction:column; gap:8px;">
-                @foreach (var order in Model.Orders)
+                @foreach (Model.Order order in Model.Orders)
                 {
-                    <a asp-page="/OrderEdit"
-                       asp-route-id="@order.Id"
-                       asp-route-userId="@Model.UserId"
-                       asp-route-accessRights="@Model.AccessRights"
-                       style="display:block; text-decoration:none; color:inherit;">
-                        <partial name="OrderUserControl" model="order" />
-                    </a>
+                    <partial name="OrderUserControl" model="order" />
                 }
             </div>
         }
     </div>
 </div>
+<script>
+    function openOrderItemsModal(elementId) {
+        document.getElementById(elementId).style.display = "block";
+    }
+
+    function closeOrderItemsModal(elementId) {
+        document.getElementById(elementId).style.display = "none";
+    }
+</script>

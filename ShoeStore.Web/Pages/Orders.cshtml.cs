@@ -19,7 +19,8 @@ namespace ShoeStore.Web.Pages
             UserId = userId;
 
             Orders = context.Orders
-                //.Include(o => o.ProductArticleNavigation)
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.ProductArticleNavigation)
                 .Include(o => o.PickUpPoint)
                 .OrderByDescending(o => o.Status)
                 .ThenByDescending(o => o.Id)

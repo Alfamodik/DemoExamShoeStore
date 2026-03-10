@@ -116,10 +116,15 @@ namespace ShoeStore.Web.Pages
             ShoeStore2Context context = new();
 
             Order order;
+            string? oldStatus = null;
 
             if (OrderId.HasValue)
             {
-                order = context.Orders.Find(OrderId.Value) ?? new Order();
+                order = context.Orders
+                    .Include(currentOrder => currentOrder.OrderItems)
+                    .FirstOrDefault(currentOrder => currentOrder.Id == OrderId.Value) ?? new Order();
+
+                oldStatus = order.Status;
             }
             else
             {
@@ -127,8 +132,43 @@ namespace ShoeStore.Web.Pages
                 context.Orders.Add(order);
             }
 
-            //order.ProductArticle = SelectedProductArticle;
-            //order.Amount = Amount;
+            bool shouldDecreaseStock = oldStatus != "Завершен" && Status == "Завершен";
+            bool shouldIncreaseStock = oldStatus == "Завершен" && Status != "Завершен";
+
+            if (shouldDecreaseStock || shouldIncreaseStock)
+            {
+                List<string> productArticles = order.OrderItems
+                    .Select(orderItem => orderItem.ProductArticle)
+                    .Distinct()
+                    .ToList();
+
+                List<Product> products = context.Products
+                    .Where(product => productArticles.Contains(product.Article))
+                    .ToList();
+
+                foreach (OrderItem orderItem in order.OrderItems)
+                {
+                    Product? product = products.FirstOrDefault(currentProduct => currentProduct.Article == orderItem.ProductArticle);
+                    if (product == null)
+                        continue;
+
+                    if (shouldDecreaseStock)
+                    {
+                        if (product.AmountInStorage < orderItem.Amount)
+                        {
+                            LoadLists();
+                            ErrorMessage = $"Недостаточно товара на складе. Артикул: {orderItem.ProductArticle}.";
+                            return Page();
+                        }
+
+                        product.AmountInStorage -= orderItem.Amount;
+                    }
+
+                    if (shouldIncreaseStock)
+                        product.AmountInStorage += orderItem.Amount;
+                }
+            }
+
             order.DateOrder = DateOrder.Value;
             order.DateDelivery = DateDelivery.HasValue ? DateDelivery.Value : null;
             order.PickUpPointId = SelectedPickUpPointId.Value;

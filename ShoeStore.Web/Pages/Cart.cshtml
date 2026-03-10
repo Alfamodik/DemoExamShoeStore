@@ -134,4 +134,26 @@ else
             </a>
         }
     </div>
+    <form method="post" asp-page-handler="Buy" style="margin:0;">
+        <input type="hidden" name="accessRights" value="@Model.AccessRights" />
+        <input type="hidden" name="userId" value="@Model.UserId" />
+
+        <div>
+            <label>Пункт выдачи</label>
+            <select asp-for="SelectedPickUpPointId" asp-items="Model.PickUpPoints">
+                <option value="">Выберите пункт выдачи</option>
+            </select>
+        </div>
+        <div>
+            <label>Дата получения</label>
+            <input asp-for="DateDelivery" type="date" />
+        </div>
+        <button type="submit">Купить</button>
+    </form>
+    @if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
+    {
+        <div style="color:red;">
+            @Model.ErrorMessage
+        </div>
+    }
 }

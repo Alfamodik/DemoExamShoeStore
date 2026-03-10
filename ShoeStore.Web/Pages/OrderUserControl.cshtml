@@ -1,16 +1,80 @@
 ﻿@model Model.Order
-<div style="border:1px solid #ddd; padding:12px; border-radius:6px; display:flex; align-items:center; gap:12px;">
+
+<div style="border:1px solid #ddd; padding:12px; border-radius:6px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px;">
     <div style="flex:1;">
-        <div style="display:flex; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; gap:16px;">
             <div>
-                <!--<div>Артикул товара: @Model--><!--.ProductArticle</div>-->
                 <div>Статус заказа: @Model.Status</div>
                 <div>Адрес пункта выдачи: @Model.PickUpPoint?.Address</div>
                 <div>Дата заказа: @Model.DateOrder.ToString("yyyy-MM-dd")</div>
             </div>
-            <div style="text-align:right;">
+
+            <div style="text-align:right; min-width:180px;">
                 <div>Дата доставки: @Model.DateDelivery?.ToString("dd.MM.yyyy")</div>
             </div>
         </div>
+    </div>
+    
+    <div style="display:flex; flex-direction:column; gap:8px; min-width:220px;">
+        <button type="button"
+                onclick="openOrderItemsModal('order-items-@Model.Id')"
+                style="padding:8px 14px; border:none; border-radius:4px; cursor:pointer;">
+            Посмотреть содержимое
+        </button>
+
+        @if ((ShoeStore.Core.AccessRights)ViewData["AccessRights"] == ShoeStore.Core.AccessRights.Admin)
+        {
+            <a asp-page="/OrderEdit"
+               asp-route-id="@Model.Id"
+               asp-route-userId="@ViewData["UserId"]"
+               asp-route-accessRights="@ViewData["AccessRights"]"
+               style="display:block; text-align:center; padding:8px 14px; text-decoration:none; color:black; border-radius:4px;">
+                Открыть заказ
+            </a>
+        }
+    </div>
+</div>
+
+<div id="order-items-@Model.Id"
+     style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.35); z-index:1000;">
+    <div style="background:white; width:600px; max-width:90%; margin:80px auto; border-radius:8px; padding:16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <h2 style="margin:0;">Состав заказа №@Model.Id</h2>
+
+            <button type="button"
+                    onclick="closeOrderItemsModal('order-items-@Model.Id')"
+                    style="border:none; background:none; font-size:24px; cursor:pointer;">
+                ×
+            </button>
+        </div>
+
+        @if (Model.OrderItems == null || Model.OrderItems.Count == 0)
+        {
+            <div>В заказе нет товаров.</div>
+        }
+        else
+        {
+            <table style="width:100%; border-collapse:collapse;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Артикул</th>
+                        <th style="text-align:left; padding:8px; border-bottom:1px solid #ddd;">Количество</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Model.OrderItem orderItem in Model.OrderItems)
+                    {
+                        <tr>
+                            <td style="padding:8px; border-bottom:1px solid #eee;">
+                                @orderItem.ProductArticleNavigation?.DisplayName
+                            </td>
+                            <td style="padding:8px; border-bottom:1px solid #eee;">
+                                @orderItem.Amount
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
     </div>
 </div>

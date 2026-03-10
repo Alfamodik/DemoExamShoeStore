@@ -37,6 +37,8 @@
     {
         <a asp-page="/ProductEditWindow"
            asp-route-article="@Model.Article"
+           asp-route-userId="@userId"
+           asp-route-accessRights="@accessRights"
            class="product-card-link">
             <div class="product-image">
                 <img src="@imageSrc" alt="product" />
