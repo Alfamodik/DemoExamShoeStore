@@ -9,6 +9,10 @@ namespace ShoeStore.Web.Pages
     {
         public AccessRights AccessRights { get; private set; }
         public int UserId { get; private set; }
+
+        public int TotalOrders { get; private set; }
+        public int CompletedOrders { get; private set; }
+
         public List<Order> Orders { get; private set; } = new();
 
         public void OnGet(AccessRights accessRights, int userId)
@@ -22,9 +26,12 @@ namespace ShoeStore.Web.Pages
                 .Include(o => o.OrderItems)
                 .ThenInclude(oi => oi.ProductArticleNavigation)
                 .Include(o => o.PickUpPoint)
-                .OrderByDescending(o => o.Status)
-                .ThenByDescending(o => o.Id)
+                .OrderBy(o => o.Status)
+                .ThenByDescending(o => o.DateOrder)
                 .ToList();
+
+            TotalOrders = Orders.Count;
+            CompletedOrders = Orders.Count(o => o.Status == "Завершен");
         }
     }
 }

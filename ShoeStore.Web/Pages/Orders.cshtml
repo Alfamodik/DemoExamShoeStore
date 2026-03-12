@@ -9,7 +9,7 @@
 <div style="padding:16px; max-width:1200px; margin:0 auto;">
     <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
         <img src="~/Resources/Icon.png" style="height:80px;" alt="icon" />
-        <h1 style="flex:1; text-align:center; font-size:40px;">Заказы</h1>
+        <h1 style="flex:1; text-align:center; font-size:40px;">Заказы (Всего: @Model.TotalOrders, завершено: @Model.CompletedOrders)</h1>
 
         @if (Model.AccessRights == ShoeStore.Core.AccessRights.Admin)
         {
